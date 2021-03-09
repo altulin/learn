@@ -1,0 +1,90 @@
+.promo
+  background-color: #EFE5DC
+  padding-top: 176px
+  padding-bottom: 103px
+  position: relative
+  overflow: hidden
+
+  +mw(600)
+    padding-top: 40px
+
+  &__inner
+    z-index: 1
+    position: relative
+
+  &__left
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+
+  &__title
+    margin-bottom: 30px
+
+    +mw(600)
+
+      & br
+        display: none
+
+  &__text
+    margin-bottom: 40px
+
+    +mw(600)
+      font-size: rem(18)
+      line-height: rem(24)
+
+      & br
+        display: none
+
+  &__link
+    display: flex
+    align-items: center
+    padding-top: 16px
+    padding-bottom: 16px
+    padding-left: 90px
+    padding-right: 15px
+    position: relative
+    border-radius: 10px
+    border: 1px solid #F3E0CF
+    background-color: rgba($white, 0.5)
+
+    +mw(600)
+      width: 100%
+      padding-left: 75px
+
+      &--alimony br
+        display: none
+
+    & + a
+      margin-top: 15px
+
+  &__link-img
+    display: block
+    position: absolute
+    top: 52%
+    transform: translateY(-50%)
+    left: 13px
+    display: block
+
+  &__link-text
+    font-weight: 500
+    color: $text
+
+  &__img-wrap
+    position: absolute
+    right: 0
+    top: 0
+    width: 70%
+    max-width: 1000px
+
+    +mw(600)
+      display: none
+
+  &__img
+    width: 100%
+
+.title
+  font-family: PTSerif,Arial,sans-serif
+  font-weight: 400
+
+  &--bold
+    font-weight: 700

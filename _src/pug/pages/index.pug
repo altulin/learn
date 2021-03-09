@@ -1,0 +1,25 @@
+extends ../templates/_main.pug
+include ../helpers/mixins.pug
+
+block content
+
+  section.promo
+    .promo__inner.container
+      .promo__left
+        h1.promo__title.title.title--bold.size-4 Поможем подготовить<br> и&nbsp;подать заявление в&nbsp;суд<br> без личной встречи с&nbsp;юристом
+        p.promo__text.size-2 Опытные юристы по семейным спорам в кратчайшие <br>сроки подготовят вам заявление, которое будет<br> твечать всем требованиям действующего <br>законодательства, а вы получите его не выходя из дома
+
+        a.promo__link(href="#marriage")
+          //- +img(`marriage`, `png`, `расторжение брака`, `promo__link-img`, `57`)
+          +img(`doc-mob`, `png`, `расторжение брака`, `promo__link-img`, `57`)
+          span.promo__link-text.size-5 Заявление в суд<br> о расторжении брака
+
+        a.promo__link(href="#alimony")
+          //- +img(`alimony`, `png`, `аллименты`, `promo__link-img`, `57`)
+          +img(`doc-mob`, `png`, `аллименты`, `promo__link-img`, `57`)
+          span.promo__link-text.size-5.promo__link--alimony Заявление в суд о&nbsp;взыскании<br> аллиментов на&nbsp;ребенка
+    figure.promo__img-wrap
+      +img(`promo-bg`, `png`, ``, `promo__img`, `846`)
+
+  
+    

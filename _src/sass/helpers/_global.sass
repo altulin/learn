@@ -1,0 +1,134 @@
+*,
+*::before,
+*::after
+  box-sizing: inherit
+
+*
+  // outline: 1px solid tomato
+
+html
+  box-sizing: border-box
+  font-size: 16px
+
+  +mw(768)
+    font-size: calc(16px + 6 * ((100vw - 320px) / 680))
+
+body
+  color: $text
+  width: 100%
+  min-height: 100vh
+  background-color: $white
+  +font(Gilroy)
+
+  display: flex
+  flex-direction: column
+
+a
+  text-decoration: none
+
+img
+  max-width: 100%
+  height: auto
+
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+fieldset,
+ul
+  margin: 0
+
+ul
+  padding-left: 0
+
+li
+  list-style: none
+
+input,
+textarea,
+button,
+select,
+a
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+
+fieldset
+  padding: 0
+  border: none
+
+button,
+input
+
+  &:focus
+    outline: none
+
+button
+  padding: 0
+  border: none
+
+.size-1
+  font-size: rem(18)
+  line-height: rem(24)
+
+.size-2
+  font-size: rem(22)
+  line-height: rem(28)
+
+.size-3
+  font-size: rem(24)
+  line-height: rem(28)
+
+.size-4
+  font-size: rem(36)
+  line-height: rem(44)
+
+  +mw(600)
+    font-size: rem(28)
+    line-height: rem(34)
+
+.size-5
+  font-size: rem(20)
+  line-height: rem(24)
+
+.container
+  max-width: 1170px
+  margin-left: auto
+  margin-right: auto
+  padding-left: 15px
+  padding-right: 15px
+
+  &--middle
+    max-width: 816px
+
+  +mw(1210)
+    // margin-left: 20px
+    // margin-right: 20px
+
+.hover-opacity
+  transition: 0.2s
+
+  &:hover
+    opacity: 0.5
+
+.tablet-visibility
+  display: none
+
+  +mw(768)
+    display: block
+
+.tablet-hidden
+
+  +mw(768)
+    display: none
+
+.phone-visibility
+  display: none
+
+  +mw(600)
+    display: block
+
+.phone-hidden
+
+  +mw(600)
+    display: none
