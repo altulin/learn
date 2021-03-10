@@ -5,21 +5,55 @@ block content
 
   section.promo
     .promo__inner.container
-      .promo__left
-        h1.promo__title.title.title--bold.size-4 Поможем подготовить<br> и&nbsp;подать заявление в&nbsp;суд<br> без личной встречи с&nbsp;юристом
-        p.promo__text.size-2 Опытные юристы по семейным спорам в кратчайшие <br>сроки подготовят вам заявление, которое будет<br> твечать всем требованиям действующего <br>законодательства, а вы получите его не выходя из дома
+      .promo__content
+        h1.promo__title.title.size-2 Научим<br> инвестировать<br> в&nbsp;криптовалюты
+        p.promo__text.size-1 Узнайте как заработать на самом<br> быстрорастущем рынке 
+        a.promo__link.btn(href="#programs") Выбрать программу
+      figure.promo__img-wrap
+        +img(`girl`, `png`, ``, `promo__img`, `490`)
 
-        a.promo__link(href="#marriage")
-          //- +img(`marriage`, `png`, `расторжение брака`, `promo__link-img`, `57`)
-          +img(`doc-mob`, `png`, `расторжение брака`, `promo__link-img`, `57`)
-          span.promo__link-text.size-5 Заявление в суд<br> о расторжении брака
+  section.programs#programs
+    .programs__inner.container
+      .programs__top 
+        .programs__head
+          h2.programs__title.title.size-2 Программы обучения
+          figure.programs__img-wrap 
+            +img(`box`, `jpg`, ``, `programs__img`, `259`)
+        .programs__tariffs.tariffs
+          a.tariffs__wrap(href="") 
+            h3.tariffs__title Старт
+            p.tariffs__prise.size-2 10 000 ₽
+            p.tariffs__text денежный бонус за успешное прохождение программы
+            .tariffs__link Выбрать тариф
+          a.tariffs__wrap(href="") 
+            h3.tariffs__title Взлет
+            p.tariffs__prise.size-2 20 000 ₽
+            p.tariffs__text денежный бонус за успешное прохождение программы
+            .tariffs__link Выбрать тариф
+          a.tariffs__wrap(href="") 
+            h3.tariffs__title Премиум
+            p.tariffs__prise.size-2 30 000 ₽
+            p.tariffs__text денежный бонус за успешное прохождение программы
+            .tariffs__link Выбрать тариф
 
-        a.promo__link(href="#alimony")
-          //- +img(`alimony`, `png`, `аллименты`, `promo__link-img`, `57`)
-          +img(`doc-mob`, `png`, `аллименты`, `promo__link-img`, `57`)
-          span.promo__link-text.size-5.promo__link--alimony Заявление в суд о&nbsp;взыскании<br> аллиментов на&nbsp;ребенка
-    figure.promo__img-wrap
-      +img(`promo-bg`, `png`, ``, `promo__img`, `846`)
+      ul.programs__list 
+        li.programs__item.disciplines.disciplines--dark
+          p.disciplines__text Простым языком о Биткойнах и майнинге
+          .disciplines__inner 
+            .disciplines__option.disciplines__option--active
+              +svg(`disc-active`, `24`, `#7B57DF`)
+            .disciplines__option
+              +svg(`disc-active`, `24`, `#E0E3EC`)
+            .disciplines__option
+              +svg(`disc-active`, `24`, `#E0E3EC`)
+        li.programs__item.disciplines
+          p.disciplines__text Основы блокчейна 
+          .disciplines__inner 
+            .disciplines__option.disciplines__option--active
+            .disciplines__option
+            .disciplines__option
+
+
 
   
     

@@ -32,6 +32,7 @@
     "jquery-form-styler": "^2.0.2",
     "mmenu-light": "^3.0.8",
     "node-normalize-scss": "^8.1.2",
+    "rfs": "^9.0.3",
     "slick-carousel": "^1.8.1"
   },
   "dependencies": {}

@@ -1,90 +1,59 @@
 .promo
-  background-color: #EFE5DC
-  padding-top: 176px
-  padding-bottom: 103px
-  position: relative
-  overflow: hidden
-
-  +mw(600)
-    padding-top: 40px
+  background: #F8F9FC
 
   &__inner
-    z-index: 1
-    position: relative
-
-  &__left
     display: flex
-    flex-direction: column
-    align-items: flex-start
-
-  &__title
-    margin-bottom: 30px
+    padding-top: 30px
 
     +mw(600)
+      flex-direction: column
 
-      & br
-        display: none
-
-  &__text
-    margin-bottom: 40px
-
-    +mw(600)
-      font-size: rem(18)
-      line-height: rem(24)
-
-      & br
-        display: none
-
-  &__link
-    display: flex
-    align-items: center
-    padding-top: 16px
-    padding-bottom: 16px
-    padding-left: 90px
-    padding-right: 15px
-    position: relative
-    border-radius: 10px
-    border: 1px solid #F3E0CF
-    background-color: rgba($white, 0.5)
+  &__content
+    width: 50%
+    flex-shrink: 0
+    +padding-top(12rem)
+    +padding-bottom(10rem)
 
     +mw(600)
       width: 100%
-      padding-left: 75px
 
-      &--alimony br
-        display: none
+  &__title
+    margin-bottom: 40px
 
-    & + a
-      margin-top: 15px
+  &__text
+    margin-bottom: 84px
 
-  &__link-img
-    display: block
-    position: absolute
-    top: 52%
-    transform: translateY(-50%)
-    left: 13px
-    display: block
-
-  &__link-text
-    font-weight: 500
-    color: $text
-
-  &__img-wrap
-    position: absolute
-    right: 0
-    top: 0
-    width: 70%
-    max-width: 1000px
+  &__link
+    max-width: 332px
 
     +mw(600)
-      display: none
+      max-width: none
+
+  &__img-wrap
+    min-width: 50%
+    display: flex
+    align-items: flex-end
+
+    & picture
+      display: flex
 
   &__img
-    width: 100%
 
 .title
-  font-family: PTSerif,Arial,sans-serif
-  font-weight: 400
+  +font(Manrope)
+  font-weight: 700
 
-  &--bold
-    font-weight: 700
+.btn
+  display: block
+  background: linear-gradient(360deg, #7551DA 0%, #A584FF 100%)
+  border-radius: 4px
+  +font-size(1.125rem)
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1)
+  border-radius: 10px
+  color: $white
+  padding-top: 25px
+  padding-bottom: 25px
+  text-align: center
+
+  &:hover
+    background: linear-gradient(360deg,#8e70e2 0,#a584ff 100%)

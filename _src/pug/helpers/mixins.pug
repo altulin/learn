@@ -1,7 +1,16 @@
 //- svg sprite
-mixin svg(id, className)
-  svg(class=`${className}`)
-    use(xlink:href=`img/sprite.svg#${id}`)
+//- mixin svg(id, className)
+//-   svg(class=`${className}`)
+//-     use(xlink:href=`img/sprite.svg#${id}`)
+
+mixin svg(name, size, fill)
+  - var size = size || 24;
+  - var sprite = "img/sprite.svg"
+  - var prefix = ""
+  
+  span.icon(aria-hidden="true")&attributes(attributes)
+      svg(viewBox='0 0 ' + size + ' ' + size width=size height=size fill=fill)
+          use(xlink:href= sprite + '#' + name)
 
 //- img webp
 mixin img(name, type, alt, className, width)
