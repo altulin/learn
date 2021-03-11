@@ -1,0 +1,43 @@
+.comfortable
+  margin-bottom: 100px
+
+  &__inner
+    max-width: 1440px
+    padding-top: 45%
+    height: 0
+    position: relative
+
+  &__content
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    +padding-top(4.7rem)
+
+  &__wrap-img
+    position: absolute
+    width: 100%
+    height: 100%
+    left: 0
+    top: 0
+    overflow: hidden
+    display: flex
+    align-items: flex-start
+    justify-content: center
+    z-index: -1
+
+  &__title
+    +margin-bottom(5.3rem)
+    text-align: center
+
+  &__list
+    display: flex
+    justify-content: space-around
+
+  &__item
+    width: calc((100% / 3) - 100px)
+
+  &__text
+    text-align: center
+    color: #131213

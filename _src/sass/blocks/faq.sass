@@ -1,1 +1,107 @@
+.faq
+  margin-bottom: 80px
 
+  &__inner
+    display: flex
+    justify-content: space-between
+
+    +mw(768)
+      flex-direction: column
+
+  &__col-left
+    max-width: 380px
+    margin-right: 20px
+
+    +mw(768)
+      margin-right: 0
+      max-width: none
+
+  &__img
+
+    +mw(768)
+      width: 100%
+
+  &__title
+    +margin-bottom(2.5rem)
+
+  &__text
+    +margin-bottom(1.4rem)
+
+  &__email
+    +font-size(1.5rem)
+    font-weight: 600
+    +font(Manrope)
+
+  &__col-right
+    flex-grow: 1
+    max-width: 735px
+
+  &__tabs
+
+.container
+
+.title
+
+.size-2
+
+.size-1
+
+.faq-tabs
+
+  &__list
+
+  &__item
+
+  &__link
+
+  &__descript
+
+.r-tabs .r-tabs-nav
+  display: none
+
+.r-tabs .r-tabs-accordion-title
+  display: block
+  margin-top: 20px
+
+  &:nth-child(2)
+    margin-top: 0
+
+.r-tabs-anchor
+  display: block
+  border: 1px solid #E6E6EA
+  border-radius: 5px
+  +padding-left(1.87rem)
+  +padding-right(1.87rem)
+  +padding-top(1.25rem)
+  +padding-bottom(1.25rem)
+  color: $text
+  +font-size(1.125rem)
+  font-weight: 500
+  position: relative
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+  &::after
+    content: ""
+    width: 40px
+    height: 40px
+    background-image: url(/img/svg/tab-arr.svg)
+    display: block
+
+.r-tabs-accordion-title.r-tabs-state-active
+
+  & .r-tabs-anchor
+    border-radius: 5px 5px 0 0
+    border-bottom: none
+
+    &::after
+      transform: rotate(90deg)
+
+.r-tabs .r-tabs-panel.r-tabs-state-active
+  border: 1px solid #E6E6EA
+  border-radius: 0 0 5px 5px
+  +padding-left(1.87rem)
+  +padding-right(1.87rem)
+  +padding-top(1.25rem)
+  +padding-bottom(1.25rem)

@@ -2,6 +2,7 @@ extends ../templates/_main.pug
 include ../helpers/mixins.pug
 
 block content
+  
 
   section.promo
     .promo__inner.container
@@ -20,39 +21,76 @@ block content
           figure.programs__img-wrap 
             +img(`box`, `jpg`, ``, `programs__img`, `259`)
         .programs__tariffs.tariffs
-          a.tariffs__wrap(href="") 
-            h3.tariffs__title Старт
-            p.tariffs__prise.size-2 10 000 ₽
-            p.tariffs__text денежный бонус за успешное прохождение программы
-            .tariffs__link Выбрать тариф
-          a.tariffs__wrap(href="") 
-            h3.tariffs__title Взлет
-            p.tariffs__prise.size-2 20 000 ₽
-            p.tariffs__text денежный бонус за успешное прохождение программы
-            .tariffs__link Выбрать тариф
-          a.tariffs__wrap(href="") 
-            h3.tariffs__title Премиум
-            p.tariffs__prise.size-2 30 000 ₽
-            p.tariffs__text денежный бонус за успешное прохождение программы
-            .tariffs__link Выбрать тариф
+          each val in [[`Старт`,`10 000`],[`Взлет`,`20 000`],[`Премиум`,`30 000`]]
+            a.tariffs__wrap(href="") 
+              h3.tariffs__title= val[0]
+              p.tariffs__prise.size-2= `${val[1]} ₽`
+              p.tariffs__text денежный бонус за успешное прохождение программы
+              .tariffs__link Выбрать тариф
 
       ul.programs__list 
-        li.programs__item.disciplines.disciplines--dark
-          p.disciplines__text Простым языком о Биткойнах и майнинге
-          .disciplines__inner 
-            .disciplines__option.disciplines__option--active
-              +svg(`disc-active`, `24`, `#7B57DF`)
-            .disciplines__option
-              +svg(`disc-active`, `24`, `#E0E3EC`)
-            .disciplines__option
-              +svg(`disc-active`, `24`, `#E0E3EC`)
-        li.programs__item.disciplines
-          p.disciplines__text Основы блокчейна 
-          .disciplines__inner 
-            .disciplines__option.disciplines__option--active
-            .disciplines__option
-            .disciplines__option
+        each val in [[`Простым языком о Биткойнах и майнинге`, 3], [`Основы блокчейна `, 3], [`Экономика  будущего`, 3], [`Оборудование для майнинга`, 3], [`Альткоины, их разновидности`, 2], [`Правовое регулирование криптовалют в РФ`, 2], [`Различные способы обмана в крипто индустрии и способы их избегать`, 2], [`Способы заработка на криптовалютах`, 1], [`Основы эффективного крипто инвестирвания`, 1], [`Обзор безопасных и надежных бирж`, 1], [`Анализ их возможностей`, 1]]
+          li.programs__item.disciplines
+            p.disciplines__text= val[0]
+            - var n = 3;
+            .disciplines__inner 
+              while n > 0
+                .disciplines__option
+                  +svg(`disc-active`, `24`, (n > val[1] ?  `#E0E3EC` : `#7B57DF`))
+                  - n--
 
+      .programs__bottom
+        .programs__tariffs.tariffs
+          each val in [[`Старт`,`10 000`],[`Взлет`,`20 000`],[`Премиум`,`30 000`]]
+            a.tariffs__wrap(href="") 
+              h3.tariffs__title= val[0]
+              p.tariffs__prise.size-2= `${val[1]} ₽`
+              p.tariffs__text денежный бонус за успешное прохождение программы
+              .tariffs__link Выбрать тариф
+
+
+  section.comfortable
+    .comfortable__inner.container
+      .comfortable__content 
+        h2.comfortable__title.title.size-2 Удобный личный кабинет
+
+        ul.comfortable__list.container
+          li.comfortable__item 
+            p.comfortable__text.size-1 Обучайтесь онлайн из любой точки мира
+          li.comfortable__item 
+            p.comfortable__text.size-1 Обучайтесь с любого мобильного или десктоп стройства 
+          li.comfortable__item 
+            p.comfortable__text.size-1 Получайте вознагрождение за&nbsp;успешно пройденные курсы
+      
+
+        figure.comfortable__wrap-img 
+          +img(`comfortable-bg`, `png`, ``, `comfortable__img`, `1440`)
+
+  section.faq
+    .faq__inner.container 
+      .faq__col-left
+        h2.faq__title.title.size-2 Частые вопросы, которые задают нам инвесторы
+        p.faq__text.size-1 Задайте нам вопрос в чате поддрежки пользователей или по email
+        p.faq__email Trust BTC@yandex.ru
+        figure.faq__img-wrap 
+          +img(`faq-bg`, `png`, ``, `faq__img`, `298`)
+      .faq__col-right
+        .faq__tabs#faq-tabs.faq-tabs 
+          - var n = 0;
+          ul.faq-tabs__list 
+            while n < 7
+              - n++
+              li.faq-tabs__item
+                a.faq-tabs__link.size-1(href=`#tab-${n}`) Что такое GH/s
+
+          - n = 0;
+          while n < 7
+            - n++
+            .faq-tabs__descript.size-1(id=`tab-${n}`) это сокращенное название единицы измерения мощности оборудования для майнинга (хэш/сек)
+          
+                
+
+              
 
 
   

@@ -41,8 +41,10 @@ $(function () {
 
 
   // faq tabs
-  $('#tabs').responsiveTabs({
-    startCollapsed: 'accordion'
+  $('#faq-tabs').responsiveTabs({
+    startCollapsed: 'accordion',
+    // animation: 'slide',
+    // duration: 300
   });
 
   //mmenu
