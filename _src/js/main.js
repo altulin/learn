@@ -11,6 +11,13 @@ $(function () {
     // duration: 300
   });
 
+  // programs-phone tabs
+  $('#programs-phone-accordion').responsiveTabs({
+    startCollapsed: 'accordion',
+    // animation: 'slide',
+    // duration: 300
+  });
+
   //mmenu
   // const menu = new MmenuLight(
   //   document.querySelector("#main-nav"),
@@ -189,6 +196,31 @@ $(function () {
   //   })
 
   //   // input mask
-  //   $(`.input-phone`).mask("(999)999-99-99");
-  //   $(`.input-code`).mask("+99");
+  $(`.input-phone`).mask("+7 (999) 999-99-99");
+
+
+  // валидация полей форм
+  $(`.form`).on(`submit`, (e) => {
+    checkValidation(e);
+  });
+
+
+  const checkValidation = (e) => {
+    e.preventDefault();
+    $(e.target).parent().find(`input:not(".not-req")`).each((i, item) => {
+      if ($(item).val().length === 0) {
+        $(item).addClass(`not-valid`);
+        droppingErr(item);
+
+      }
+    })
+  };
+
+
+  // сброс ошибки
+  const droppingErr = (item) => {
+    $(item).on(`click`, () => {
+      $(item).removeClass(`not-valid`);
+    })
+  };
 });

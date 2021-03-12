@@ -1,7 +1,7 @@
 //- svg sprite
-//- mixin svg(id, className)
-//-   svg(class=`${className}`)
-//-     use(xlink:href=`img/sprite.svg#${id}`)
+mixin svg_my(id, className)
+  svg(class=`${className}`)
+    use(xlink:href=`/img/sprite.svg#${id}`)
 
 mixin svg(name, size, fill)
   - var size = size || 24;

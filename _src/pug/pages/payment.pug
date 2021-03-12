@@ -1,15 +1,10 @@
-//- extends ../templates/_document.pug
+extends ../templates/_document.pug
 include ../helpers/mixins.pug
 
 block content
 
   section.doc
     .doc__inner.container
-      ul.doc__breadcrumbs.doc-breadcrumbs
-        li.doc-breadcrumbs__item
-          a.doc-breadcrumbs__link.hover-opacity(href="index.html") Главная
-        li.doc-breadcrumbs__item
-          a.doc-breadcrumbs__link.doc-breadcrumbs__link--current.hover-opacity(href="payment.html") Оплата и возврат
 
       .doc__content
         h1.doc__title.size-3 Информация об оплате
