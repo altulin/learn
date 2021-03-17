@@ -17,6 +17,7 @@ const jquery_modal_js = `node_modules/jquery-modal/jquery.modal.min.js`;
 const sourceCss = `${sourceFolder}/sass/style.sass` // файл для разработки Пользовательские стили
 // const projectCss = `style.css`; // файл в продакшн
 const projectCssMin = `style.min.css`; // файл в продакшн минифицированный
+const projectCss = `style.css`; // файл в продакшн минифицированный
 
 // установленные библиотеки css
 const normalize_css = `node_modules/normalize.css/normalize.css`;

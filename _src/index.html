@@ -48,6 +48,72 @@
         </figure>
       </div>
     </section>
+    <section class="profit">
+      <div class="profit__inner container"> 
+        <div class="profit__top"> 
+          <div class="profit__title-box"> 
+            <h2 class="profit__title title size-2"><mark>Почему нужно обучаться</mark> крипто-инвестированию</h2>
+          </div>
+          <div class="profit__text-box"> 
+            <p class="profit__text">За последний год инвесторы получили от капиталовложений в биткоин невероятные доходы – более 700%. Такую прибыльность до сих пор не показывала ни одна валюта. Крайне высокая волатильность в сочетании с большим потенциалом привлекают не только долгосрочных инвесторов, но и трейдеров, торгующих на краткосрочных таймфреймах. </p>
+          </div>
+        </div>
+        <div class="profit__bottom coin">
+          <div class="coin__list"> 
+            <li class="coin__item">
+              <h3 class="coin__name">Bitcoin</h3>
+              <p class="coin__percent">2000<span>%</span></p>
+              <p class="coin__period">за последний год</p>
+              <figure class="coin__img-wrap"> 
+                <picture>
+                  <source srcset="/img/webp/coin.webp" type="image/webp"/><img class="coin__img" src="/img/coin.png" alt="криптовалюта" width="300" loading="lazy"/>
+                </picture>
+              </figure>
+            </li>
+            <li class="coin__item">
+              <h3 class="coin__name">Cardano</h3>
+              <p class="coin__percent">1000<span>%</span></p>
+              <p class="coin__period">за последний год</p>
+              <figure class="coin__img-wrap"> 
+                <picture>
+                  <source srcset="/img/webp/btc.webp" type="image/webp"/><img class="coin__img" src="/img/btc.png" alt="криптовалюта" width="300" loading="lazy"/>
+                </picture>
+              </figure>
+            </li>
+            <li class="coin__item">
+              <h3 class="coin__name">Cardano</h3>
+              <p class="coin__percent">1000<span>%</span></p>
+              <p class="coin__period">за последний год</p>
+              <figure class="coin__img-wrap"> 
+                <picture>
+                  <source srcset="/img/webp/btc.webp" type="image/webp"/><img class="coin__img" src="/img/btc.png" alt="криптовалюта" width="300" loading="lazy"/>
+                </picture>
+              </figure>
+            </li>
+            <li class="coin__item">
+              <h3 class="coin__name">Cardano</h3>
+              <p class="coin__percent">1000<span>%</span></p>
+              <p class="coin__period">за последний год</p>
+              <figure class="coin__img-wrap"> 
+                <picture>
+                  <source srcset="/img/webp/btc.webp" type="image/webp"/><img class="coin__img" src="/img/btc.png" alt="криптовалюта" width="300" loading="lazy"/>
+                </picture>
+              </figure>
+            </li>
+            <li class="coin__item">
+              <h3 class="coin__name">Cardano</h3>
+              <p class="coin__percent">1000<span>%</span></p>
+              <p class="coin__period">за последний год</p>
+              <figure class="coin__img-wrap"> 
+                <picture>
+                  <source srcset="/img/webp/btc.webp" type="image/webp"/><img class="coin__img" src="/img/btc.png" alt="криптовалюта" width="300" loading="lazy"/>
+                </picture>
+              </figure>
+            </li>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="programs tablet-hidden" id="programs">
       <div class="programs__inner container">
         <div class="programs__top"> 
@@ -297,15 +363,15 @@
           </li>
         </ul>
         <div class="programs__bottom">
-          <div class="programs__tariffs tariffs"><a class="tariffs__wrap" href=""> 
+          <div class="programs__tariffs tariffs"><a class="tariffs__wrap" href="#modal-pay-start" rel="modal:open"> 
               <h3 class="tariffs__title">Старт</h3>
               <p class="tariffs__prise size-2">10 000 ₽</p>
               <p class="tariffs__text">денежный бонус за успешное прохождение программы</p>
-              <div class="tariffs__link">Выбрать тариф</div></a><a class="tariffs__wrap" href=""> 
+              <div class="tariffs__link">Выбрать тариф</div></a><a class="tariffs__wrap" href="#modal-pay-takeoff" rel="modal:open"> 
               <h3 class="tariffs__title">Взлет</h3>
               <p class="tariffs__prise size-2">20 000 ₽</p>
               <p class="tariffs__text">денежный бонус за успешное прохождение программы</p>
-              <div class="tariffs__link">Выбрать тариф</div></a><a class="tariffs__wrap" href=""> 
+              <div class="tariffs__link">Выбрать тариф</div></a><a class="tariffs__wrap" href="#modal-pay-premium" rel="modal:open"> 
               <h3 class="tariffs__title">Премиум</h3>
               <p class="tariffs__prise size-2">30 000 ₽</p>
               <p class="tariffs__text">денежный бонус за успешное прохождение программы</p>
@@ -756,9 +822,12 @@
         </div>
       </div>
     </section>
-    <section class="modal-acess container container--modal modal" id="modal-acess">
-      <div class="modal-acess__inner"> 
-        <figure class="modal-acess__img-wrap"></figure>
+    <section class="modal-success container container--modal modal" id="modal-success"><a class="modal-success__close-link modal-link" href="#modal-success" rel="modal:close" aria-label="закрыть"></a>
+      <div class="modal-success__inner"> 
+        <figure class="modal-success__img-wrap"><img class="modal-success__img" src="/img/svg/success.svg" alt="Ваше обучение успешно  оплачено" width="60" height="60"></figure>
+        <h2 class="modal-success__title title">Ваше обучение <br>успешно  оплачено</h2>
+        <p class="modal-success__text">Войдите в личный кабинет, чтобы начать учиться</p><a class="modal-success__link btn" href="">Войти </a>
+        <p class="modal-success__note">Отправили вам на email логин и пароль для доступа к личному кабинету</p>
       </div>
     </section>
   </main>

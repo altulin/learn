@@ -18,6 +18,44 @@ $(function () {
     // duration: 300
   });
 
+  // успешная оплата обучения
+  $(`.pay-form__btn`).on(`click`, (e) => {
+    e.preventDefault();
+    $(`#modal-success`).modal();
+  })
+
+  const cache = $('.promo-main__nav');
+  if (cache.length) {
+    const vTop = -153 + cache.offset().top - parseFloat(cache.css('margin-top').replace(/auto/, 0));
+
+    $(window).on(`scroll`, () => {
+      const y = $(this).scrollTop();
+
+      if (y >= vTop) {
+        cache.addClass('stuck');
+      } else {
+        cache.removeClass('stuck');
+      }
+    });
+  }
+
+
+  //store the initial position of the element
+  // var vTop = cache.offset().top - parseFloat(cache.css('margin-top').replace(/auto/, 0));
+  // $(window).scroll(function (event) {
+  // what the y position of the scroll is
+  // var y = $(this).scrollTop();
+
+  // whether that's below the form
+  // if (y >= vTop) {
+  // if so, ad the fixed class
+  // cache.addClass('stuck');
+  // } else {
+  // otherwise remove it
+  // cache.removeClass('stuck');
+  // }
+  // });
+
   //mmenu
   // const menu = new MmenuLight(
   //   document.querySelector("#main-nav"),

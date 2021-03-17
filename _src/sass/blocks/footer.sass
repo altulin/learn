@@ -1,17 +1,11 @@
 .page-footer
   margin-bottom: 60px
 
-  &__inner
-
   &__top
 
     border-top: 1px solid #EEEEF0
     border-bottom: 1px solid #EEEEF0
     background-color: #f8f9fc
-
-  &__down
-
-  &__link
 
 .footer-top
 
@@ -21,8 +15,12 @@
     display: flex
     align-items: center
     justify-content: space-between
+    background-image: url(/img/footer-bg.png)
+    background-repeat: no-repeat
+    background-position: center bottom
 
-  &__logo
+    +mw(600)
+      background-size: 90%
 
   &__text
     margin-left: 15px
@@ -36,22 +34,6 @@
     font-weight: 500
     font-size: 16px
     color: #9374F0
-
-  &__link-text
-
-.container
-
-.logo
-
-  &__img-wrap
-
-  &__img
-
-.tablet-hidden
-
-.icon
-
-.tablet-visibility
 
 .footer-down
   border-bottom: 1px solid #EEEEF0
@@ -98,10 +80,6 @@
       & + a
         margin-top: 20px
 
-  &__pay
-
-.hover-opacity
-
 .pay
   display: flex
   align-items: center
@@ -110,11 +88,3 @@
 
     & +li
       margin-left: 25px
-
-  &__item--visa
-
-  &__img
-
-  &__item--mc
-
-  &__item--mir

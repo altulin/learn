@@ -6,6 +6,8 @@ block content
   - const tar = [[`Старт`,`10 000`, `start`],[`Взлет`,`20 000`, `takeoff`],[`Премиум`,`30 000`, `premium`]];
 
   - const arr = [[`Простым языком о Биткойнах и майнинге`, 3], [`Основы блокчейна `, 3], [`Экономика  будущего`, 3], [`Оборудование для майнинга`, 3], [`Альткоины, их разновидности`, 2], [`Правовое регулирование криптовалют в РФ`, 2], [`Различные способы обмана в крипто индустрии и способы их избегать`, 2], [`Способы заработка на криптовалютах`, 1], [`Основы эффективного крипто инвестирвания`, 1], [`Обзор безопасных и надежных бирж`, 1], [`Анализ их возможностей`, 1]];
+
+  -const coins = [[`Bitcoin`, `2000`],[`Cardano`, `1000`],[`Cardano`, `1000`],[`Cardano`, `1000`],[`Cardano`, `1000`]]
   
 
   section.promo
@@ -16,6 +18,141 @@ block content
         a.promo__link.btn(href="#programs") Выбрать программу
       figure.promo__img-wrap
         +img(`girl`, `png`, ``, `promo__img`, `490`)
+
+  section.profit
+    .profit__inner.container 
+      .profit__top 
+        .profit__title-box 
+          h2.profit__title.title.size-2 <mark>Почему нужно обучаться</mark> крипто-инвестированию
+
+        .profit__text-box 
+          p.profit__text За последний год инвесторы получили от капиталовложений в биткоин невероятные доходы – более 700%. Такую прибыльность до сих пор не показывала ни одна валюта. Крайне высокая волатильность в сочетании с большим потенциалом привлекают не только долгосрочных инвесторов, но и трейдеров, торгующих на краткосрочных таймфреймах. 
+      
+      .profit__bottom.coin
+        .coin__list  
+          each val in coins
+            li.coin__item
+              h3.coin__name= val[0]
+              p.coin__percent= `${val[1]}`
+                span %
+              p.coin__period за последний год
+              figure.coin__img-wrap 
+                +img((val[0] !== `Bitcoin` ? `btc` : `coin`), `png`, `криптовалюта`, `coin__img`, `300`)
+
+
+
+
+
+
+  //- section.promo-main 
+  //-   .promo-main__wrapper 
+  //-     .promo-main__content 
+  //-       figure.promo-main__img-wrap 
+  //-         +img(`promo-main-bg`, `jpg`, ``, `promo-main__img`, `1600`)
+
+  //-       .promo-main__inner 
+  //-         h2.promo-main__title Пошив штор на заказ
+  //-         ul.promo-main__list   
+  //-           li.promo-main__item По индивидуальному дизайну
+  //-           li.promo-main__item Дизайнерские подушки в подарок
+
+  //-         a.promo-main__link.js_alModal(href data-modal="js_modal-4") Заказать
+
+  //-   nav.promo-main__nav.promo-nav
+  //-     ul.promo-nav__list
+  //-       li.promo-nav__item
+  //-         a.promo-nav__link(href="") Стоимость
+  //-       li.promo-nav__item
+  //-         a.promo-nav__link(href="") Акции
+  //-       li.promo-nav__item
+  //-         a.promo-nav__link(href="") Отзывы
+  //-       li.promo-nav__item
+  //-         a.promo-nav__link(href="") Каталог
+  
+
+  //- section.ord 
+  //-   .ord__title-wrap
+  //-     h2.ord__title Заказать шторы у нас в&nbsp;салоне
+  //-     p.ord__text очень просто
+    
+  //-   .ord__inner 
+  //-     ul.ord__list 
+  //-       li.ord__item.ord__item--up
+  //-         p.ord__item-num 1
+  //-         h3.ord__sub-title Бесплатный выезд <br>дизайнера, замер
+  //-         p.ord__sub-text более 50 000 тканей и&nbsp;карнизов в наличии
+  //-       li.ord__item.ord__item--down
+  //-         p.ord__item-num 2
+  //-         h3.ord__sub-title Создаем <br>визуализацию проекта
+  //-         p.ord__sub-text 26 видов штор в 9 стилях
+  //-       li.ord__item.ord__item--up
+  //-         p.ord__item-num 3
+  //-         h3.ord__sub-title Пошив от 7 дней
+  //-         p.ord__sub-text 12 лет опыта, собственное производство
+  //-       li.ord__item.ord__item--down
+  //-         p.ord__item-num 4
+  //-         h3.ord__sub-title Установка, навеска
+  //-         p.ord__sub-text профессиональное оборудование
+  //-       li.ord__item
+  //-         p.ord__item-num 5
+  //-         h3.ord__sub-title Гарантия 1 год
+  //-         p.ord__sub-text 1748 выполенных проектов
+      
+  //-     a.ord__link.js_alModal(href data-modal="js_modal-4") Пригласить дизайнера
+
+
+  //- section.catalog-box 
+  //-   .catalog-box__title-wrap
+  //-     h2.catalog-box__title Каталог
+  //-     p.catalog-box__text мы шьем любые виды штор на заказ от 3 дней
+
+  //-   .catalog-box__inner 
+  //-     a.catalog-box__link.catalog-box__link--big(href="") 
+  //-       figure.catalog-box__img-wrap.catalog-box__img-wrap--big 
+  //-         +img(`sh-1`, `png`, ``, `catalog-box__img catalog-box__img--big`, `466`)
+  //-         figcaption.catalog-box__sub-title-wrap.catalog-box__sub-title-wrap--main
+  //-           h3.catalog-box__sub-title.catalog-box__sub-title--main Шторы
+  //-           ul.catalog-box__list 
+  //-             li.catalog-box__item 
+  //-               h4.catalog-box__sub-title В гостиную 
+  //-             li.catalog-box__item 
+  //-               h4.catalog-box__sub-title В зал
+  //-             li.catalog-box__item 
+  //-               h4.catalog-box__sub-title На кухню
+  //-             li.catalog-box__item 
+  //-               h4.catalog-box__sub-title В спальню
+  //-             li.catalog-box__item 
+  //-               h4.catalog-box__sub-title Римские
+  //-             li.catalog-box__item 
+  //-               h4.catalog-box__sub-title Рулонные
+
+
+      a.catalog-box__link.catalog-box__link--little(href="") 
+        figure.catalog-box__img-wrap.catalog-box__img-wrap--little
+          +img(`sh-2`, `png`, ``, `catalog-box__img catalog-box__img--little`, `453`)
+          figcaption.catalog-box__sub-title-wrap
+            h3.catalog-box__sub-title Жалюзи
+
+      a.catalog-box__link.catalog-box__link--middle(href="") 
+        figure.catalog-box__img-wrap.catalog-box__img-wrap--middle
+          +img(`sh-3`, `png`, ``, `catalog-box__img catalog-box__img--middle`, `691`)
+          figcaption.catalog-box__sub-title-wrap
+            h3.catalog-box__sub-title Ткани
+
+      a.catalog-box__link.catalog-box__link--middle(href="") 
+        figure.catalog-box__img-wrap.catalog-box__img-wrap--middle
+          +img(`sh-4`, `png`, ``, `catalog-box__img catalog-box__img--middle`, `691`)
+          figcaption.catalog-box__sub-title-wrap
+            h3.catalog-box__sub-title Карнизы
+
+
+
+
+
+
+  
+
+
 
   section.programs.tablet-hidden#programs
     .programs__inner.container
@@ -45,8 +182,8 @@ block content
 
       .programs__bottom
         .programs__tariffs.tariffs
-          each val in [[`Старт`,`10 000`],[`Взлет`,`20 000`],[`Премиум`,`30 000`]]
-            a.tariffs__wrap(href="") 
+          each val in tar
+            a.tariffs__wrap(href=`#modal-pay-${val[2]}` rel="modal:open") 
               h3.tariffs__title= val[0]
               p.tariffs__prise.size-2= `${val[1]} ₽`
               p.tariffs__text денежный бонус за успешное прохождение программы
@@ -167,9 +304,15 @@ block content
             button.pay-form__btn.btn(type="submit") Оплатить
             p.pay-form__consent нажимая на кнопку, вы подтвержаете согласие с <a class="pay-form__consent-link" href="/offer.html" target="_blank">договором оферты</a> и <a class="pay-form__consent-link" href="/politics.html" target="_blank">политикой конфиденциальности</a>
 
-  section.modal-acess.container.container--modal.modal#modal-acess
-    .modal-acess__inner 
-      figure.modal-acess__img-wrap
+  section.modal-success.container.container--modal.modal#modal-success
+    a.modal-success__close-link.modal-link(href="#modal-success" rel="modal:close" aria-label="закрыть")
+    .modal-success__inner 
+      figure.modal-success__img-wrap
+        img.modal-success__img(src="/img/svg/success.svg", alt="Ваше обучение успешно  оплачено" width="60" height="60")
+      h2.modal-success__title.title Ваше обучение <br>успешно  оплачено
+      p.modal-success__text Войдите в личный кабинет, чтобы начать учиться
+      a.modal-success__link.btn(href="") Войти 
+      p.modal-success__note Отправили вам на email логин и пароль для доступа к личному кабинету
         
 
 
