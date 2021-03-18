@@ -1,0 +1,11 @@
+-const link = [[`Мое обучение`, `/office-my-learn.html`], [`Программы обучения`, ``], [`Вывод вознаграждения`, ``], [`Реферальная программа`, ``]]
+
+.office-body__left.body-asside
+    asside.body-asside__box
+      a.body-asside__logo(href="/index.html")
+        +img(`logo-w`, `png`, `logo`, `logo__img`, `107`)
+      nav.body-asside__nav.asside-nav
+        ul.asside-nav__list
+          each val, i in link
+            li.asside-nav__item
+              a.asside-nav__link(href=(active===i+1 ? `#` : href=`${val[1]}`) class=(active===i+1 ? `asside-nav__link--active` : ``))= val[0]

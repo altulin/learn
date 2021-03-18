@@ -1,0 +1,21 @@
+//- 
+include ../modules/_head
+
+body.office-body
+
+  block asside-active
+  include ../modules/_office-asside
+
+  .office-body__right
+    header.office-header
+      .office-header__inner.office-wide
+        a.office-header__link.office-header__link--my(href="/office-my-data.html") Мои данные
+        a.office-header__link.office-header__link--exit(href="/index.html") Выйти
+    
+    main.office-main 
+      block content
+
+    footer.office-footer.footer-down
+      include ../modules/_footer-down
+      
+  include ../modules/_scripts

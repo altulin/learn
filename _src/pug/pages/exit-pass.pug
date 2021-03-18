@@ -1,0 +1,21 @@
+extends ../templates/_exit.pug
+include ../helpers/mixins.pug
+
+block content
+
+  
+
+  section.exit.container
+    form.exit__form.form-exit#pass-form(action="#" method="post" name="exit-form")
+      fieldset.form-exit__field 
+        legend.form-exit__legend.size-1 Восстановление пароля
+
+        .form-exit__box 
+          label.form-exit__label
+            span Email
+            input.form-exit__input.req(type="text" placeholder="Email" name="pass-form-email")
+        
+        
+      p.form-exit__text Укажите адрес эл. почты, который вы использвоали при регистрации. Мы вышлем вам инструкцию по восстановлению пароля.
+      button.form-exit__btn.btn(type="submit") Восстановить пароль
+      a.form-exit__forget(href="/exit.html") Вспомнили пароль?

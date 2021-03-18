@@ -25,133 +25,20 @@ block content
         .profit__title-box 
           h2.profit__title.title.size-2 <mark>Почему нужно обучаться</mark> крипто-инвестированию
 
-        .profit__text-box 
-          p.profit__text За последний год инвесторы получили от капиталовложений в биткоин невероятные доходы – более 700%. Такую прибыльность до сих пор не показывала ни одна валюта. Крайне высокая волатильность в сочетании с большим потенциалом привлекают не только долгосрочных инвесторов, но и трейдеров, торгующих на краткосрочных таймфреймах. 
+        .profit__text-box.size-1 
+          p.profit__text За последний год инвесторы получили от капиталовложений в&nbsp;биткоин невероятные доходы – более 700%. Такую прибыльность до сих пор не показывала ни одна валюта. Крайне высокая волатильность в сочетании с большим потенциалом привлекают не только долгосрочных инвесторов, но и трейдеров, торгующих на краткосрочных таймфреймах. 
       
       .profit__bottom.coin
-        .coin__list  
-          each val in coins
-            li.coin__item
-              h3.coin__name= val[0]
-              p.coin__percent= `${val[1]}`
-                span %
-              p.coin__period за последний год
+        ul.coin__list  
+          each val, i in coins
+            li.coin__item(class=`coin__item--${i+1}`)
+              .coin__item-inner
+                h3.coin__name.size-1(class=(val[0] === `Bitcoin` ? `coin__name--hi` : ``))= val[0]
+                p.coin__percent.size-2= `+${val[1]}`
+                  span %
+                p.coin__period за последний год
               figure.coin__img-wrap 
                 +img((val[0] !== `Bitcoin` ? `btc` : `coin`), `png`, `криптовалюта`, `coin__img`, `300`)
-
-
-
-
-
-
-  //- section.promo-main 
-  //-   .promo-main__wrapper 
-  //-     .promo-main__content 
-  //-       figure.promo-main__img-wrap 
-  //-         +img(`promo-main-bg`, `jpg`, ``, `promo-main__img`, `1600`)
-
-  //-       .promo-main__inner 
-  //-         h2.promo-main__title Пошив штор на заказ
-  //-         ul.promo-main__list   
-  //-           li.promo-main__item По индивидуальному дизайну
-  //-           li.promo-main__item Дизайнерские подушки в подарок
-
-  //-         a.promo-main__link.js_alModal(href data-modal="js_modal-4") Заказать
-
-  //-   nav.promo-main__nav.promo-nav
-  //-     ul.promo-nav__list
-  //-       li.promo-nav__item
-  //-         a.promo-nav__link(href="") Стоимость
-  //-       li.promo-nav__item
-  //-         a.promo-nav__link(href="") Акции
-  //-       li.promo-nav__item
-  //-         a.promo-nav__link(href="") Отзывы
-  //-       li.promo-nav__item
-  //-         a.promo-nav__link(href="") Каталог
-  
-
-  //- section.ord 
-  //-   .ord__title-wrap
-  //-     h2.ord__title Заказать шторы у нас в&nbsp;салоне
-  //-     p.ord__text очень просто
-    
-  //-   .ord__inner 
-  //-     ul.ord__list 
-  //-       li.ord__item.ord__item--up
-  //-         p.ord__item-num 1
-  //-         h3.ord__sub-title Бесплатный выезд <br>дизайнера, замер
-  //-         p.ord__sub-text более 50 000 тканей и&nbsp;карнизов в наличии
-  //-       li.ord__item.ord__item--down
-  //-         p.ord__item-num 2
-  //-         h3.ord__sub-title Создаем <br>визуализацию проекта
-  //-         p.ord__sub-text 26 видов штор в 9 стилях
-  //-       li.ord__item.ord__item--up
-  //-         p.ord__item-num 3
-  //-         h3.ord__sub-title Пошив от 7 дней
-  //-         p.ord__sub-text 12 лет опыта, собственное производство
-  //-       li.ord__item.ord__item--down
-  //-         p.ord__item-num 4
-  //-         h3.ord__sub-title Установка, навеска
-  //-         p.ord__sub-text профессиональное оборудование
-  //-       li.ord__item
-  //-         p.ord__item-num 5
-  //-         h3.ord__sub-title Гарантия 1 год
-  //-         p.ord__sub-text 1748 выполенных проектов
-      
-  //-     a.ord__link.js_alModal(href data-modal="js_modal-4") Пригласить дизайнера
-
-
-  //- section.catalog-box 
-  //-   .catalog-box__title-wrap
-  //-     h2.catalog-box__title Каталог
-  //-     p.catalog-box__text мы шьем любые виды штор на заказ от 3 дней
-
-  //-   .catalog-box__inner 
-  //-     a.catalog-box__link.catalog-box__link--big(href="") 
-  //-       figure.catalog-box__img-wrap.catalog-box__img-wrap--big 
-  //-         +img(`sh-1`, `png`, ``, `catalog-box__img catalog-box__img--big`, `466`)
-  //-         figcaption.catalog-box__sub-title-wrap.catalog-box__sub-title-wrap--main
-  //-           h3.catalog-box__sub-title.catalog-box__sub-title--main Шторы
-  //-           ul.catalog-box__list 
-  //-             li.catalog-box__item 
-  //-               h4.catalog-box__sub-title В гостиную 
-  //-             li.catalog-box__item 
-  //-               h4.catalog-box__sub-title В зал
-  //-             li.catalog-box__item 
-  //-               h4.catalog-box__sub-title На кухню
-  //-             li.catalog-box__item 
-  //-               h4.catalog-box__sub-title В спальню
-  //-             li.catalog-box__item 
-  //-               h4.catalog-box__sub-title Римские
-  //-             li.catalog-box__item 
-  //-               h4.catalog-box__sub-title Рулонные
-
-
-      a.catalog-box__link.catalog-box__link--little(href="") 
-        figure.catalog-box__img-wrap.catalog-box__img-wrap--little
-          +img(`sh-2`, `png`, ``, `catalog-box__img catalog-box__img--little`, `453`)
-          figcaption.catalog-box__sub-title-wrap
-            h3.catalog-box__sub-title Жалюзи
-
-      a.catalog-box__link.catalog-box__link--middle(href="") 
-        figure.catalog-box__img-wrap.catalog-box__img-wrap--middle
-          +img(`sh-3`, `png`, ``, `catalog-box__img catalog-box__img--middle`, `691`)
-          figcaption.catalog-box__sub-title-wrap
-            h3.catalog-box__sub-title Ткани
-
-      a.catalog-box__link.catalog-box__link--middle(href="") 
-        figure.catalog-box__img-wrap.catalog-box__img-wrap--middle
-          +img(`sh-4`, `png`, ``, `catalog-box__img catalog-box__img--middle`, `691`)
-          figcaption.catalog-box__sub-title-wrap
-            h3.catalog-box__sub-title Карнизы
-
-
-
-
-
-
-  
-
 
 
   section.programs.tablet-hidden#programs
@@ -165,7 +52,8 @@ block content
           each val in tar
             a.tariffs__wrap(href=`#modal-pay-${val[2]}` rel="modal:open") 
               h3.tariffs__title= val[0]
-              p.tariffs__prise.size-2= `${val[1]} ₽`
+              p.tariffs__prise.size-2= `${val[1]}`
+                span &nbsp;₽ 
               p.tariffs__text денежный бонус за успешное прохождение программы
               .tariffs__link Выбрать тариф
 
@@ -192,7 +80,7 @@ block content
   section.programs-phone.tablet-visibility#programs
     .programs-phone__inner.container 
       .programs-phone__top 
-        h2.programs-phone__title.title.size-2 Программы обучения
+        h2.programs-phone__title.title.size-2 Программы<br> обучения
         figure.programs-phone__img-wrap 
           +img(`box`, `jpg`, ``, `programs-phone__img`, `259`)
 
@@ -212,7 +100,14 @@ block content
                   p.disc__text= val[0]
                   +svg(`disc-active`, `24`, ((val[1] - (2- i)) > 0?  `#7B57DF` : `#E0E3EC`))
 
-            a.accordion__choose-link(href=`#modal-pay-${val[2]}` rel="modal:open") Выбрать тариф
+            //- a.accordion__choose-link(href=`#modal-pay-${val[2]}` rel="modal:open") Выбрать тариф
+            .programs__tariffs.tariffs.tariffs--phone
+              a.tariffs__wrap(href=`#modal-pay-${val[2]}` rel="modal:open") 
+                h3.tariffs__title= val[0]
+                p.tariffs__prise.size-2= `${val[1]}`
+                  span &nbsp;₽ 
+                p.tariffs__text денежный бонус за успешное прохождение программы
+                .tariffs__link Выбрать тариф
 
 
           
@@ -243,7 +138,7 @@ block content
       .faq__col-left
         h2.faq__title.title.size-2 Частые вопросы, которые задают нам инвесторы
         p.faq__text.size-1 Задайте нам вопрос в чате поддрежки пользователей или по email
-        p.faq__email Trust BTC@yandex.ru
+        a.faq__email(href="mailto:BTC@yandex.ru") Trust BTC@yandex.ru
         figure.faq__img-wrap 
           +img(`faq-bg`, `png`, ``, `faq__img`, `298`)
       .faq__col-right

@@ -1,0 +1,27 @@
+extends ../templates/_exit.pug
+include ../helpers/mixins.pug
+
+block content
+
+  
+
+  section.exit.container
+    form.exit__form.form-exit#exit-form(action="#" method="post" name="exit-form")
+      fieldset.form-exit__field 
+        legend.form-exit__legend.size-1 Вход в личный кабинет
+
+        .form-exit__box 
+          label.form-exit__label
+            span Email
+            input.form-exit__input.req(type="text" placeholder="Email" name="exit-form-email")
+        
+        .form-exit__box 
+          label.form-exit__label
+            span Пароль
+            input.form-exit__input.req(type="password" placeholder="Пароль" name="exit-form-pass")
+
+      button.form-exit__btn.btn(type="submit") Войти
+      a.form-exit__forget(href="/exit-pass.html") Забыли пароль?
+
+
+            

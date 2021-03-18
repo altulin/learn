@@ -54,7 +54,7 @@
     font-size: 16px
     color: #000
 
-    +mw(600)
+    +mw(768)
       margin-bottom: 20px
 
   &__docs
@@ -62,7 +62,7 @@
     max-width: 600px
     display: flex
     justify-content: space-between
-    order: -1
+    // order: -1
 
     +mw(768)
       max-width: none
@@ -74,7 +74,7 @@
 
   &__link
     font-size: 16px
-    color: #000
+    color: rgba($black, 0.5)
 
     +mw(600)
       & + a
@@ -88,3 +88,8 @@
 
     & +li
       margin-left: 25px
+
+.footer-down
+  & .footer-down__inner
+    border-top: 1px solid #E0E3EE
+  // margin-top: auto

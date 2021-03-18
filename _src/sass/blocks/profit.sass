@@ -1,0 +1,124 @@
+.profit
+  padding-top: 130px
+  padding-bottom: 130px
+
+  +mw(768)
+    padding-top: 30px
+    padding-bottom: 30px
+
+  &__inner
+
+  &__top
+    display: flex
+    margin-bottom: 125px
+
+    +mw(768)
+      flex-direction: column
+
+  &__title-box
+    width: 50%
+
+    +mw(768)
+      width: 100%
+      margin-bottom: 30px
+
+  &__title
+
+    & mark
+      background-color: transparent
+      color: #7117E4
+
+  &__text-box
+    width: 50%
+    max-width: 550px
+    margin-left: auto
+    margin-right: auto
+    padding-top: 20px
+
+    +mw(768)
+      max-width: none
+      width: 100%
+
+  &__text
+    color: #46404C
+
+  &__bottom
+
+.container
+
+.title
+
+.size-2
+
+.coin
+
+  &__list
+    height: 375px
+    position: relative
+
+    +mw(768)
+      height: auto
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+
+  &__item
+    width: 25%
+    position: absolute
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    +mw(768)
+      width: calc(50% - 10px)
+      position: static
+      margin-bottom: 20px
+      // flex-direction: row-reverse
+
+    &--1
+      left: 0
+    &--2
+      left: calc( 20% )
+      top: 70px
+      z-index: 1
+    &--3
+      left: calc( 40% - 20px )
+    &--4
+      left: calc( 60% + 10px )
+      z-index: -1
+      top: -40px
+
+    &--5
+      left: calc( 80% - 60px )
+      top: 130px
+
+    & + li
+
+  &__name
+    font-weight: 600
+    letter-spacing: -0.02em
+    color: #3CC8C8
+    +font(Manrope)
+
+    &--hi
+      color: #E4A76B
+
+  &__percent
+    +font(Manrope)
+    font-weight: 400
+
+    & span
+      font-size: 18px
+      font-weight: 400
+
+  &__period
+    font-weight: 500
+    font-size: 14px
+    line-height: 16px
+    letter-spacing: -0.233333px
+    color: #C5C0CA
+
+  &__img-wrap
+
+    +mw(768)
+      // width: 100px

@@ -1,0 +1,36 @@
+extends ../templates/_office.pug
+include ../helpers/mixins.pug
+
+block asside-active
+  -const active = 1;
+
+block content
+  section.my-program.office-container
+    h2.my-program__title.office-title Ваша программа обучения
+    a.my-program__link(href="")
+      figure.my-program__img-wrap 
+        +img(`prog`, `png`, ``, `my-program__img`, `220`)
+
+      .my-program__content.pay-content 
+        .pay-content__title Программа: Старт 
+        .pay-content__text За последний год инвесторы получили от капиталовложений в биткоин невероятные доходы – более 700%. Такую прибыльность до сих пор не показывала ни одна валюта. Крайне высокая волатильность в сочетании с большим потенциалом. 
+        .pay-content__inner
+          .pay-content__moduls 
+            .pay-content__moduls-block
+              p.size-1 4 модуля
+            .pay-content__moduls-exercise 
+              p.size-1 12 занятий
+          p.pay-content__bonus Денежный бонус за успешное прохождение программы 5000 ₽  
+
+    .my-program__stat.stat 
+      h3.stat__title.size-1 Статистика прохождения<br> программы обучения:
+      ul.stat__list 
+        li.stat__item 
+          span.stat__term Пройдено:
+          span.stat__def.size-1 1 из 4 модулей
+        li.stat__item 
+          span.stat__term Изучено:
+          span.stat__def.size-1 5 из 12 занятий
+        li.stat__item 
+          span.stat__term До получения вознагрождения:
+          span.stat__def.stat__def--time.size-1 24 дня 12 часов 20 минут
