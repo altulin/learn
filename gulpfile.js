@@ -273,7 +273,7 @@ exports.createSprite = createSprite;
 exports.svgmin = svgmin;
 exports.cheerio = cheerio;
 exports.replace = replace;
-exports.svgstore = svgstore;
+// exports.svgstore = svgstore;
 exports.rename = rename;
 exports.createWebp = createWebp;
 
