@@ -1,0 +1,46 @@
+.referral
+
+  &__title
+
+  &__inner
+    background: #FFFFFF
+    border: 1px solid #E0E3EE
+    border-radius: 10px
+    padding: 51px 60px
+    display: block
+    background-image: url(/img/hands.png)
+    background-repeat: no-repeat
+    background-position: 100% center
+
+    +mw(1440)
+      padding-left: 15px
+      padding-right: 15px
+
+    +mw(768)
+      background-image: none
+
+    +mw(600)
+      background-image: url(/img/hands.png)
+      padding-bottom: 200px
+      background-position: 50% bottom
+      // background-image: none
+      background-size: contain
+
+  &__title-text
+    color: #46404C
+    font-weight: 600
+    margin-bottom: 30px
+
+  &__text
+    color: #46404C
+    font-size: 16px
+    max-width: 570px
+
+    & + p
+      margin-top: 30px
+
+.office-main
+  padding-bottom: 120px
+
+  +mw(768)
+    padding-bottom: 60px

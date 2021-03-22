@@ -57,30 +57,35 @@ $(function () {
   // });
 
   //mmenu
-  // const menu = new MmenuLight(
-  //   document.querySelector("#main-nav"),
-  //   "(max-width: 600px)"
-  // );
+  const menu = new MmenuLight(
+    document.querySelector("#office-header-nav"),
+    "(max-width: 1000px)"
+  );
 
-  // const navigator = menu.navigation({
-  //   title: ""
-  // });
+  const navigator = menu.navigation({
+    title: ""
+  });
 
-  // const drawer = menu.offcanvas();
+  const drawer = menu.offcanvas();
 
-  // $(`.header__open`).on(`click`, (e) => {
-  //   e.preventDefault();
-  //   drawer.open();
-  //   $(`.header__open`).addClass(`hidden`);
-  //   $(`.header__close`).removeClass(`hidden`);
-  // })
+  $(`.office-header__link-open`).on(`click`, (e) => {
+    e.preventDefault();
+    drawer.open();
+    $(`.office-header__link-open`).addClass(`hidden`);
+    $(`.office-header__link-close`).removeClass(`hidden`);
+  });
 
-  // $(`.header__close`).on(`click`, (e) => {
-  //   e.preventDefault();
-  //   drawer.close();
-  //   $(`.header__close`).addClass(`hidden`);
-  //   $(`.header__open`).removeClass(`hidden`);
-  // })
+  $(`.office-header__link-close`).on(`click`, (e) => {
+    e.preventDefault();
+    drawer.close();
+    $(`.office-header__link-close`).addClass(`hidden`);
+    $(`.office-header__link-open`).removeClass(`hidden`);
+  });
+
+  $(`.mm-ocd__backdrop`).on(`click`, () => {
+    $(`.office-header__link-close`).addClass(`hidden`);
+    $(`.office-header__link-open`).removeClass(`hidden`);
+  });
 
   // $(`.nav__link`).each((i, item) => {
   //   $(item).on(`click`, () => {

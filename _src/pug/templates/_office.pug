@@ -1,6 +1,7 @@
 //- 
 include ../modules/_head
 
+
 body.office-body
 
   block asside-active
@@ -9,8 +10,32 @@ body.office-body
   .office-body__right
     header.office-header
       .office-header__inner.office-wide
-        a.office-header__link.office-header__link--my(href="/office-my-data.html") Мои данные
-        a.office-header__link.office-header__link--exit(href="/index.html") Выйти
+        
+
+        a.office-header__link-open(href="#office-header-nav")
+          span Открыть меню
+          +svg_my(`burger`, `office-header__icon-open`)
+        
+        a.office-header__link-close.hidden(href="#office-header-nav")
+          span Закрыть меню
+          +svg_my(`menu-close`, `office-header__icon-close`)
+
+        a.office-header__logo.logo(href="index.html")
+          figure.logo__img-wrap
+            +img(`logo`, `png`, `logo`, `logo__img`, `107`)
+        
+        nav.office-header__nav#office-header-nav
+          ul.office-header__list 
+          
+            each val, i in link
+              li.office-header__item.office-header__item--visible
+                a.office-header__link(href=(active===i+1 ? `#` : href=`${val[1]}`) class=(active===i+1 ? `office-header__link--active` : ``))= val[0]
+
+            li.office-header__item
+              a.office-header__link.office-header__link--my(href="/office-my-data.html") Мои данные
+
+            li.office-header__item.office-header__item--exit
+              a.office-header__link.office-header__link--exit(href="/index.html") Выйти
     
     main.office-main 
       block content

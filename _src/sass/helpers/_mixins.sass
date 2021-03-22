@@ -17,6 +17,14 @@
   @media screen and (max-width: $width + 'px')
     @content
 
+// visible
+
+@mixin  visible($size)
+  display: none
+
+  +mw($size)
+    display: block
+
 // Font mixin
 @mixin font-load($name, $size, $weight, $style)
   @font-face

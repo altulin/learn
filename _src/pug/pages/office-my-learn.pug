@@ -7,24 +7,31 @@ block asside-active
 block content
   section.my-program.office-container
     h2.my-program__title.office-title Ваша программа обучения
-    a.my-program__link(href="")
-      figure.my-program__img-wrap 
+    a.my-program__link(href="/office-program.html")
+
+      figure.my-program__img-wrap.tablet-hidden 
         +img(`prog`, `png`, ``, `my-program__img`, `220`)
 
       .my-program__content.pay-content 
-        .pay-content__title Программа: Старт 
-        .pay-content__text За последний год инвесторы получили от капиталовложений в биткоин невероятные доходы – более 700%. Такую прибыльность до сих пор не показывала ни одна валюта. Крайне высокая волатильность в сочетании с большим потенциалом. 
-        .pay-content__inner
-          .pay-content__moduls 
-            .pay-content__moduls-block
-              p.size-1 4 модуля
-            .pay-content__moduls-exercise 
-              p.size-1 12 занятий
-          p.pay-content__bonus Денежный бонус за успешное прохождение программы 5000 ₽  
 
-    .my-program__stat.stat 
+        figure.my-program__img-wrap.tablet-visibility 
+          +img(`prog`, `png`, ``, `my-program__img`, `220`)
+
+        .pay-content__title Программа: Старт 
+
+        .pay-content__cont
+          .pay-content__text За последний год инвесторы получили от капиталовложений в биткоин невероятные доходы – более 700%. Такую прибыльность до сих пор не показывала ни одна валюта. Крайне высокая волатильность в сочетании с большим потенциалом. 
+          .pay-content__inner
+            .pay-content__moduls 
+              .pay-content__moduls-block
+                p.size-1 4 модуля
+              .pay-content__moduls-exercise 
+                p.size-1 12 занятий
+            p.pay-content__bonus Денежный бонус за успешное прохождение программы 5000 ₽  
+
+    .my-program__stat.stat.stat--gorizontal 
       h3.stat__title.size-1 Статистика прохождения<br> программы обучения:
-      ul.stat__list 
+      ul.stat__list.stat__list--gorizontal
         li.stat__item 
           span.stat__term Пройдено:
           span.stat__def.size-1 1 из 4 модулей
@@ -34,3 +41,10 @@ block content
         li.stat__item 
           span.stat__term До получения вознагрождения:
           span.stat__def.stat__def--time.size-1 24 дня 12 часов 20 минут
+
+  section.referral.office-container
+    h2.referral__title.office-title Реферальная программа 
+    a.referral__inner(href="") 
+      p.referral__title-text.size-1 Делитесь с другими курсами BTC Trust<br>и получайте за это вознаграждение. 
+      p.referral__text Реферальная программа BTC Trust предоставляет возможность всем желающим зарабатывать 10% от депозитов людей, которых вы пригласили. 
+      p.referral__text  Вы пригласили друга, он приобрёл обучающую программу на сумму 10 000 ₽, вы получаете 1 000 ₽.

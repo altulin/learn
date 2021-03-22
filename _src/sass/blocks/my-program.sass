@@ -2,9 +2,6 @@
   padding-top: 40px
 
   &__title
-    margin-bottom: 40px
-    font-weight: 600
-    +font-size(1.5rem)
 
   &__link
     display: flex
@@ -13,14 +10,24 @@
     border: 1px solid #E0E3EE
     border-radius: 10px
     margin-bottom: 20px
-    color
+
+    +mw(1440)
+      padding-left: 15px
+      padding-right: 15px
 
   &__img-wrap
     width: 220px
     height: 220px
     flex-shrink: 0
 
+    +mw(768)
+      width: 28%
+      height: auto
+      margin-bottom: 20px
+
   &__img
+
+    +mw(768)
 
   &__content
     flex-grow: 1
@@ -30,21 +37,48 @@
     display: flex
     flex-direction: column
 
+    +mw(1440)
+      margin-left: 20px
+
+    +mw(768)
+      margin-left: 0
+      flex-direction: row
+      flex-wrap: wrap
+
   &__stat
+    justify-content: space-between
 
 .office-container
   max-width: 1212px
   +padding-left(4rem)
   +padding-right(4rem)
 
+  +mw(1440)
+    padding-left: 15px
+    padding-right: 15px
+
 .office-title
+  font-weight: 600
+  +font-size(1.5rem)
+  margin-bottom: 40px
 
 .my-program
+  margin-bottom: 100px
+
+  +mw(768)
+    margin-bottom: 60px
 
   & .pay-content
 
     &__title
       color: $text
+
+      +mw(768)
+        margin-left: auto
+        margin-right: auto
+        align-self: center
+        margin-bottom: 0
+        transform: translateY(-10px)
 
     &__text
       color: $text
@@ -54,11 +88,19 @@
       margin-bottom: 0
       max-width: 400px
 
+      +mw(768)
+        max-width: none
+        margin-bottom: 20px
+
     &__inner
       display: flex
       margin-top: auto
       align-items: center
       justify-content: space-between
+
+      +mw(768)
+        flex-direction: column
+        align-items: flex-start
 
     &__moduls-block
 
@@ -67,27 +109,77 @@
     &__bonus
       max-width: 250px
 
+      +mw(1440)
+        margin-left: 15px
+
+      +mw(768)
+        max-width: none
+        margin-left: 0
+
 .size-1
 
 .stat
   display: flex
   padding: 30px
   align-items: center
+  background-color: #fff
+  border: 1px solid #E0E3EE
+  border-radius: 10px
+
+  &--gorizontal
+    background-image: url(/img/stat-bg.png)
+    background-repeat: no-repeat
+    background-position: 30% bottom
+
+    +mw(768)
+      flex-direction: column
+      align-items: flex-start
+      background-image: url(/img/stat-bg-big.png)
+      padding-bottom: 120px
+      padding-left: 15px
+      padding-right: 15px
+      background-position: 50% bottom
 
   &__title
     font-weight: 600
     text-align: center
 
+    +mw(768)
+      margin-bottom: 30px
+      text-align: left
+
   &__list
     display: flex
     align-items: center
+
+    &--gorizontal
+      justify-content: space-between
+      flex-grow: 1
+      max-width: 590px
+      margin-left: 20px
+
+      +mw(768)
+        margin-left: 0
+        flex-direction: column
+        align-items: flex-start
 
   &__item
     display: flex
     flex-direction: column
 
+    +mw(768)
+
+      & + li
+        margin-top: 30px
+
   &__term
+    font-size: 14px
+    margin-bottom: 5px
+
+    +mw(768)
+      font-size: 18px
 
   &__def
+    font-weight: 600
 
   &__def--time
