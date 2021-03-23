@@ -1,0 +1,41 @@
+extends ../templates/_office.pug
+include ../helpers/mixins.pug
+
+block asside-active
+  -const active = 1;
+
+block content
+  section.theory.office-container
+    h2.theory__title.office-title Модуль 2. Основы блокчейна
+      p.theory__sub-title Занятие 1. Название занятия
+
+    
+    .theory__inner  
+      .theory__col.theory__col-left
+        ul.theory__list.theory-block
+          -let n = 0;
+          while n < 3
+            -n++
+            li.theory-block__item 
+              
+              figure.theory-block__wrap-img 
+                +img(`theory-bg`, `jpg`, ``, `theory-block__img`, `680`)
+              h3.theory-block__title Заголовок 
+              p.theory-block__text За последний год инвесторы получили от капиталовложений в биткоин невероятные доходы – более 700%. Такую прибыльность до сих пор не показывала ни одна валюта. Крайне высокая волатильность в сочетании с большим потенциалом. За последний год инвесторы получили от капиталовложений в биткоин невероятные доходы – более 700%. Такую прибыльность до сих пор не показывала ни одна валюта. Крайне высокая волатильность в сочетании с большим потенциалом.
+
+        a.theory__link.btn.size-1(href="#") Следующее занятие
+      .theory__col.theory__col-right.theory__col--navigation 
+        .navigation
+          a.navigation__link-back(href="/office-program.html") Все модули
+          h3.navigation__head Модуль 2. Основы блокчейна
+          ul.navigation__list   
+            -n = 0;
+            while n<4
+              -n++
+              li.navigation__item
+                a.navigation__link(href="#" class=(n===4?`navigation__link--test`:``) class=(n===1?`navigation__link--active`:``))
+                  span.navigation__exercise= (n===4?`Тест.`:`Занятие ${n}`)
+                  span.navigation__type= (n===4?`Закрепление изученного`:`Название занятия`) 
+ 
+
+

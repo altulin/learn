@@ -1,0 +1,66 @@
+extends ../templates/_office.pug
+include ../helpers/mixins.pug
+
+block asside-active
+  -const active = 1;
+
+block content
+  -const forms = [[`checkbox`,`Вариант`,`half`,``],[`radio`,`Bitcoin`,`third`,`img`],[`radio`,`Вариант`,`half`,``],[`radio`,`Очень длиный вариант ответа на вопрос`,`wide`,``],[`checkbox`,`Очень длиный вариант ответа на вопрос`,`wide`,``]]
+  section.test.office-container
+    h2.test__title.office-title Модуль 2. Основы блокчейна
+      p.test__sub-title Занятие 1. Название занятия
+
+    .test__inner 
+      .test__col.test__col--left
+        each val, i in forms
+          form.test__form.test-form(action="https://httpbin.org/anything" method="post" id=`${i+1}` class=(i===0 ? `test-form--visible`: ``)) 
+            fieldset.test-form__field 
+              legend.test-form__legend Наиболее популярные криптовалюты?
+              .test-form__progress.progress
+                p.progress__title= `Готово: ${i * 20}%`
+                .progress__bar(class=`progress__bar--${i * 20}`)
+
+              .test-form__content 
+                -n=0;
+                while n < 4
+                  -n++
+                  .test-form__box(class=`test-form__box--${val[2]}`)
+                    input.test-form__input(type=`${val[0]}` id=`test-input-${i}-${n}` value=`${n}` name=`${val[0]}-${i}`)
+                    label.test-form__label(for=`test-input-${i}-${n}` class=(val[3] === `img`? `test-form__label--${val[3]}`: ``) class= `test-form__label--${val[0]}`)
+                      span= `${val[1]}`
+
+            .test-form__buttons 
+              button.test-form__btn-back.btn(type="button") Назад
+              button.test-form__btn.btn(type="submit") Далее
+
+        .test-result.result 
+          .result__title Результаты
+          .result__box 
+
+          .result__buttons 
+            button.result__btn-back.btn(type="button") Пройти тест заново
+            a.result__btn.btn(href="") Следующий модуль
+
+
+
+
+
+
+
+      .test__col.test__col--right.test__col--navigation
+        .navigation
+          a.navigation__link-back(href="/office-program.html") Все модули
+          h3.navigation__head Модуль 2. Основы блокчейна
+          ul.navigation__list   
+            -n = 0;
+            while n<4
+              -n++
+              li.navigation__item
+                a.navigation__link.navigation__link--active(href=(n===4?``:`/office-theory.html`) class=(n===4?`navigation__link--test`:``) class=(n===1?`navigation__link--active`:``))
+                  span.navigation__exercise= (n===4?`Тест.`:`Занятие ${n}`)
+                  span.navigation__type= (n===4?`Закрепление изученного`:`Название занятия`) 
+
+    
+
+    
+    

@@ -10,6 +10,7 @@ const projectJsMin = `script.min.js`; // файл в продакшн миниф
 const jquery_js = `node_modules/jquery/dist/jquery.min.js`;
 const jquery_modal_js = `node_modules/jquery-modal/jquery.modal.min.js`;
 const mmenu_js = `node_modules/mmenu-light/dist/mmenu-light.js`;
+const jquery_fajax_js = `node_modules/jquery.fajax/dist/jquery.fajax.min.js`;
 // const jquery_formstyler_js = `node_modules/jquery-form-styler/dist/jquery.formstyler.min.js`;
 // const slick_js = `node_modules/slick-carousel/slick/slick.min.js`;
 
@@ -102,6 +103,7 @@ function scripts() {
     jquery_js,
     jquery_modal_js,
     mmenu_js,
+    jquery_fajax_js,
     // jquery_formstyler_js,
     // slick_js,
     path.src.libs_js, // библиотеки из папки libs

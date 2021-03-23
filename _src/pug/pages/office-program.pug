@@ -2,9 +2,39 @@ extends ../templates/_office.pug
 include ../helpers/mixins.pug
 
 block asside-active
-  -const active = 2;
+  -const active = 1;
 
 block content
+  -const heads = [`Простым языком о Биткойнах и майнинге`,`Основы блокчейна`,`Экономика будущего`,`Оборудование для майнинга`]
   section.plan.office-container  
     h2.plan__title.office-title Программа: Старт
-    
+    .plan__inner 
+      .plan__col.plan__col--left
+       
+        ul.plan__list 
+          each val, i in heads
+            li.plan__item 
+              a.plan__item-link.size-1(href=`#plan-tab-${i+1}`)=  `Модуль ${i+1}. ${val}`
+
+        each val, i in heads
+          .plan__box(id=`plan-tab-${i+1}`) 
+            p.plan__box-title Содержание:
+            //- each val, i in heads
+            -let m = 0;
+            while m < 4
+              -m++
+              a.plan__link(href=((m) === 4 ? `/office-test.html`:`/office-theory.html`) class=(m === 1 || i+1===1  ? `plan__link--active`:``) class=(m === 4 ? `plan__link--test`:``))= ((m) === 4 ? `Тест. Закрепление изученного`:`Занятие ${i+1}. Название занятия`)
+         
+      .plan__col.plan__col--right
+        .plan__stat.stat.stat--vertical 
+          h3.stat__title.size-1 Статистика прохождения<br> программы обучения:
+          ul.stat__list.stat__list--vertical
+            li.stat__item 
+              span.stat__term Пройдено:
+              span.stat__def.size-1 1 из 4 модулей
+            li.stat__item 
+              span.stat__term Изучено:
+              span.stat__def.size-1 5 из 12 занятий
+            li.stat__item 
+              span.stat__term До получения вознагрождения:
+              span.stat__def.stat__def--time.size-1 24 дня 12 часов 20 минут

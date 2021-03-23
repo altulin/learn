@@ -1,0 +1,125 @@
+.plan
+  padding-top: 40px
+
+  &__inner
+    display: flex
+    justify-content: space-between
+
+    +mw(768)
+      flex-direction: column
+
+  &__col--left
+    max-width: 680px
+    flex-grow: 1
+
+    +mw(768)
+      max-width: none
+      margin-bottom: 30px
+
+  &__box
+
+    &-title
+      +margin-bottom(1.25rem)
+      font-weight: 500
+      font-size: 14px
+      color: #90969E
+      padding-left: 41px
+
+      +mw(768)
+        padding-left: 15px
+        padding-right: 15px
+
+  &__link
+    display: block
+    padding-top: 10px
+    padding-bottom: 10px
+    padding-left: 40px
+    padding-right: 40px
+    color: #46404C
+    font-weight: 500
+    font-size: 16px
+    display: flex
+    flex-direction: row-reverse
+    align-items: center
+    justify-content: flex-end
+    pointer-events: none
+
+    +mw(768)
+      padding-left: 15px
+      padding-right: 15px
+
+    &:hover
+      background-color: #F4F4F5
+
+    &::after
+      content: ""
+      width: 13px
+      height: 16px
+      background-image: url(/img/svg/plan.svg)
+
+      margin-right: 18px
+
+    &::before
+      content: ""
+      width: 20px
+      height: 20px
+      background-image: url(/img/svg/plan-disc.svg)
+      margin-left: auto
+      background-size: contain
+
+  &__link--active
+
+    pointer-events: auto
+
+    &::before
+      background-image: url(/img/svg/disc-active.svg)
+
+  &__link--test
+
+    &::after
+      background-image: url(/img/svg/plan-test.svg)
+      width: 18px
+      height: 18px
+      margin-right: 14px
+
+  &__col--right
+    max-width: 340px
+    flex-grow: 1
+    margin-left: 20px
+
+    +mw(768)
+      max-width: none
+      margin-left: 0
+
+.stat
+
+  &--vertical
+    flex-direction: column
+    align-items: flex-start
+    padding-left: 40px
+    padding-right: 40px
+    padding-bottom: 130px
+    background-image: url(/img/stat-bg-big.png)
+    background-repeat: no-repeat
+    background-position: 50% bottom
+
+    +mw(768)
+      padding-left: 15px
+      padding-right: 15px
+
+    & .stat__title
+      text-align: left
+      margin-bottom: 30px
+
+  &__list--vertical
+    flex-direction: column
+    align-items: flex-start
+
+    & .stat__item
+
+      & + li
+        margin-top: 30px
+
+.plan .r-tabs .r-tabs-panel.r-tabs-state-active
+  padding-left: 0
+  padding-right: 0

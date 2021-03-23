@@ -1,0 +1,146 @@
+.theory
+  padding-top: 40px
+
+  &__title
+
+  &__sub-title
+    margin-top: 10px
+
+  &__inner
+    display: flex
+    justify-content: space-between
+
+    +mw(768)
+      flex-direction: column-reverse
+
+  &__col-left
+    flex-grow: 1
+    max-width: 680px
+
+  &__list
+    margin-bottom: 60px
+
+  &__link
+    padding-top: 19px
+    padding-bottom: 20px
+
+  &__col-right
+    flex-grow: 1
+    max-width: 340px
+    flex-shrink: 0
+    margin-left: 20px
+
+    +mw(768)
+      max-width: none
+      margin-left: 0
+      margin-bottom: 40px
+
+  &__col--navigation
+
+.theory-block
+
+  &__item
+
+    &+li
+      margin-top: 40px
+
+  &__title
+    +font-size(1.5rem)
+    font-weight: 600
+    margin-bottom: 20px
+
+  &__text
+    font-size: 16px
+    color: #46404C
+
+  &__wrap-img
+    width: 100%
+    margin-bottom: 60px
+    border-radius: 10px
+    overflow: hidden
+    background-color: #fff
+
+    +mw(768)
+      margin-bottom: 30px
+
+  &__img
+    width: 100%
+
+.navigation
+  background: #FFFFFF
+  border: 1px solid #E0E3EE
+  border-radius: 10px
+  padding-bottom: 46px
+
+  &__link-back
+    color: #90969E
+    font-weight: 500
+    font-size: 14px
+    padding-left: 50px
+    padding-top: 20px
+    padding-bottom: 20px
+    display: block
+    position: relative
+    border-bottom: 1px solid #E6E6EA
+
+    &:hover
+      background: #F4F4F5
+
+    &::after
+      content: ""
+      position: absolute
+      left: 30px
+      top: 50%
+      transform: translateY(-50%)
+      width: 10px
+      height: 10px
+      background-image: url(/img/svg/arr.svg)
+
+  &__head
+    font-weight: 600
+    margin-bottom: 30px
+    margin-top: 30px
+    padding-left: 30px
+
+  &__link
+    display: flex
+    flex-direction: column
+    padding-left: 55px
+    padding-top: 15px
+    padding-bottom: 15px
+    color: #46404C
+    font-size: 16px
+    font-weight: 500
+    position: relative
+    pointer-events: none
+
+    &:hover
+      background: #F4F4F5
+
+    &::after
+      content: ""
+      position: absolute
+      left: 30px
+      top: 17px
+      width: 13px
+      height: 16px
+      background-image: url(/img/svg/plan.svg)
+      background-size: contain
+      background-repeat: no-repeat
+
+  &__exercise
+    margin-bottom: 5px
+
+    &::after
+      background-image: url(/img/svg/plan-test.svg)
+      width: 18px
+      height: 18px
+      left: 29px
+
+  &__link--active
+    pointer-events: auto
+
+    &::after
+      background-image: url(/img/svg/disc-active.svg)
+      width: 16px
+      left: 29px
