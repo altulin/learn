@@ -1,52 +1,35 @@
 .prog
   padding-top: 60px
 
-  &__title
-
   &__inner
     display: flex
     justify-content: space-between
+
+    +mw(768)
+      flex-direction: column-reverse
 
   &__col-left
     flex-grow: 1
     max-width: 680px
 
+    +mw(768)
+      max-width: none
+
   &__col-right
     flex-grow: 1
     max-width: 340px
+    margin-left: 20px
 
-  &__stat
+    +mw(768)
+      width: 100%
+      max-width: none
+      margin-bottom: 30px
+      margin-left: 0
 
-.office-container
+.referral--prog
 
-.office-title
-
-.referral
-
-  &__inner
-
-  &__title-text
-
-  &__text
-
-.size-1
-
-.stat
-
-  &__title
-
-  &__ref-link
-
-  &__list
-
-  &__list--vertical
-
-  &__item
-
-  &__term
-
-  &__def
-
-  &__def--time
-
-.stat--vertical
+  & .referral__inner
+    padding-bottom: 200px
+    background-position: 50% bottom
+    background-size: contain
+    background-image: url(/img/prog-bg.png)
