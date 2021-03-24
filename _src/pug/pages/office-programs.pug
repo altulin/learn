@@ -1,47 +1,16 @@
-extends ../templates/_main.pug
+extends ../templates/_office.pug
 include ../helpers/mixins.pug
 
-block content
+block asside-active
+  -const active = 2;
 
+block content
   - const tar = [[`Старт`,`10 000`, `start`],[`Взлет`,`20 000`, `takeoff`],[`Премиум`,`30 000`, `premium`]];
 
   - const arr = [[`Простым языком о Биткойнах и майнинге`, 3], [`Основы блокчейна `, 3], [`Экономика  будущего`, 3], [`Оборудование для майнинга`, 3], [`Альткоины, их разновидности`, 2], [`Правовое регулирование криптовалют в РФ`, 2], [`Различные способы обмана в крипто индустрии и способы их избегать`, 2], [`Способы заработка на криптовалютах`, 1], [`Основы эффективного крипто инвестирвания`, 1], [`Обзор безопасных и надежных бирж`, 1], [`Анализ их возможностей`, 1]];
 
   -const coins = [[`Bitcoin`, `2000`],[`Cardano`, `1000`],[`Cardano`, `1000`],[`Cardano`, `1000`],[`Cardano`, `1000`]]
-  
-
-  section.promo
-    .promo__inner.container
-      .promo__content
-        h1.promo__title.title.size-2 Научим<br> инвестировать<br> в&nbsp;криптовалюты
-        p.promo__text.size-1 Узнайте как заработать на самом<br> быстрорастущем рынке 
-        a.promo__link.btn(href="#programs") Выбрать программу
-      figure.promo__img-wrap
-        +img(`girl`, `png`, ``, `promo__img`, `490`)
-
-  section.profit
-    .profit__inner.container 
-      .profit__top 
-        .profit__title-box 
-          h2.profit__title.title.size-2 <mark>Почему нужно обучаться</mark> крипто-инвестированию
-
-        .profit__text-box.size-1 
-          p.profit__text За последний год инвесторы получили от капиталовложений в&nbsp;биткоин невероятные доходы – более 700%. Такую прибыльность до сих пор не показывала ни одна валюта. Крайне высокая волатильность в сочетании с большим потенциалом привлекают не только долгосрочных инвесторов, но и трейдеров, торгующих на краткосрочных таймфреймах. 
-      
-      .profit__bottom.coin
-        ul.coin__list  
-          each val, i in coins
-            li.coin__item(class=`coin__item--${i+1}`)
-              .coin__item-inner
-                h3.coin__name.size-1(class=(val[0] === `Bitcoin` ? `coin__name--hi` : ``))= val[0]
-                p.coin__percent.size-2= `+${val[1]}`
-                  span %
-                p.coin__period за последний год
-              figure.coin__img-wrap 
-                +img((val[0] !== `Bitcoin` ? `btc` : `coin`), `png`, `криптовалюта`, `coin__img`, `300`)
-
-
-  section.programs.tablet-hidden#programs
+  section.programs.tablet-hidden#programs.office-programs
     .programs__inner.container
       .programs__top 
         .programs__head
@@ -77,7 +46,7 @@ block content
               p.tariffs__text денежный бонус за успешное прохождение программы
               .tariffs__link Выбрать тариф
 
-  section.programs-phone.tablet-visibility#programs
+  section.programs-phone.tablet-visibility#programs.office-programs--tablet
     .programs-phone__inner.container 
       .programs-phone__top 
         h2.programs-phone__title.title.size-2 Программы<br> обучения
@@ -109,51 +78,6 @@ block content
                 p.tariffs__text денежный бонус за успешное прохождение программы
                 .tariffs__link Выбрать тариф
 
-
-          
-
-
-
-
-
-  section.comfortable
-    .comfortable__inner.container
-      .comfortable__content 
-        h2.comfortable__title.title.size-2 Удобный личный кабинет
-
-        ul.comfortable__list.container
-          li.comfortable__item 
-            p.comfortable__text.size-1 Обучайтесь онлайн из любой точки мира
-          li.comfortable__item 
-            p.comfortable__text.size-1 Обучайтесь с любого мобильного или десктоп стройства 
-          li.comfortable__item 
-            p.comfortable__text.size-1 Получайте вознагрождение за&nbsp;успешно пройденные курсы
-      
-
-        figure.comfortable__wrap-img 
-          +img(`comfortable-bg`, `png`, ``, `comfortable__img`, `1440`)
-
-  section.faq
-    .faq__inner.container 
-      .faq__col-left
-        h2.faq__title.title.size-2 Частые вопросы, которые задают нам инвесторы
-        p.faq__text.size-1 Задайте нам вопрос в чате поддрежки пользователей или по email
-        a.faq__email(href="mailto:BTC@yandex.ru") Trust BTC@yandex.ru
-        figure.faq__img-wrap 
-          +img(`faq-bg`, `png`, ``, `faq__img`, `298`)
-      .faq__col-right
-        .faq__tabs#faq-tabs.faq-tabs 
-          - var n = 0;
-          ul.faq-tabs__list 
-            while n < 7
-              - n++
-              li.faq-tabs__item
-                a.faq-tabs__link.size-1(href=`#tab-${n}`) Что такое GH/s
-
-          - n = 0;
-          while n < 7
-            - n++
-            .faq-tabs__descript.size-1(id=`tab-${n}`) это сокращенное название единицы измерения мощности оборудования для майнинга (хэш/сек)
 
   each val in tar
     section.modal-pay.container.container--modal.modal(id=`modal-pay-${val[2]}`) 
@@ -209,16 +133,4 @@ block content
       a.modal-success__link.btn(href="/exit.html") Войти 
       p.modal-success__note Отправили вам на email логин и пароль для доступа к личному кабинету
         
-
-
-          
-          
-
-          
-                
-
-              
-
-
   
-    

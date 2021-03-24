@@ -13,7 +13,7 @@ block content
     .test__inner 
       .test__col.test__col--left
         each val, i in forms
-          form.test__form.test-form(action="https://httpbin.org/anything" method="post" id=`${i+1}` class=(i===0 ? `test-form--visible`: ``)) 
+          form.test__form.test-form(action="#" method="post" id=`test-form-${i+1}` class=(i===0 ? `test-form--visible`: ``)) 
             fieldset.test-form__field 
               legend.test-form__legend Наиболее популярные криптовалюты?
               .test-form__progress.progress
@@ -30,7 +30,7 @@ block content
                       span= `${val[1]}`
 
             .test-form__buttons 
-              button.test-form__btn-back.btn(type="button") Назад
+              button.test-form__btn-back.btn(type="button" class=(i ===0?`hidden`: ``)) Назад
               button.test-form__btn.btn(type="submit") Далее
 
         .test-result.result 

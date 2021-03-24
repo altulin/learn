@@ -1,0 +1,177 @@
+.reward
+  padding-top: 60px
+
+  &__title
+
+  &__inner
+    display: flex
+    justify-content: space-between
+
+    +mw(768)
+      flex-direction: column-reverse
+
+  &__col-left
+    flex-grow: 1
+    max-width: 440px
+
+    +mw(768)
+      max-width: none
+
+  &__col-right
+    flex-grow: 1
+    max-width: 580px
+    margin-left: 20px
+
+    +mw(768)
+      max-width: none
+      margin-left: 0
+      margin-bottom: 30px
+
+.reward-form
+  background: #FFFFFF
+  border: 1px solid #E0E3EE
+  border-radius: 10px
+  padding: 60px 48px
+
+  +mw(600)
+    padding-left: 15px
+    padding-right: 15px
+
+  &__legend
+    font-size: 20px
+    font-weight: 600
+    margin-bottom: 38px
+
+  &__box
+    display: flex
+    flex-direction: column
+
+    & + div
+      margin-top: 30px
+
+  &__label
+    font-size: 16px
+    color: #8D8D93
+    margin-bottom: 10px
+
+  &__input
+    font-size: 18px
+    color: #8D8D93
+    font-weight: 500
+    padding: 22px 20px
+    background: #F0F0F4
+    border: 1px solid #E6E6EA
+    border-radius: 4px
+    width: 100%
+
+    &::placeholder
+      font-size: 18px
+      color: #8D8D93
+      font-weight: 500
+
+  &__btn
+    width: 100%
+    margin-top: 40px
+    margin-bottom: 10px
+
+  &__text
+    color: #7C859D
+    font-size: 12px
+    text-align: center
+
+  &__link
+    color: #7C859D
+
+.available
+
+  & + div
+    margin-top: 20px
+
+  &__top
+    background: #FFFFFF
+    border: 1px solid #E0E3EE
+    border-radius: 10px
+    padding: 40px
+
+    +mw(600)
+      padding-left: 15px
+      padding-right: 15px
+
+  &__title
+    font-size: 14px
+    font-weight: 500
+    margin-bottom: 30px
+    color: #90969E
+
+  &__box
+    display: flex
+    align-items: flex-end
+
+    +mw(1440)
+      flex-direction: column
+      align-items: flex-start
+
+  &__price
+    font-weight: 600
+    font-size: 72px
+    line-height: 100%
+
+    +mw(1400)
+      margin-bottom: 15px
+
+    +mw(1200)
+      font-size: 50px
+
+  &__status
+    margin-left: 20px
+    padding: 7px 10px
+    background: #E5F9EF
+    border-radius: 4px
+    color: #00C35D
+
+    +mw(1400)
+      margin-left: 0
+
+  &__bottom
+    background: #FAFAFC
+    border: 1px solid #E0E3EE
+    border-radius: 0px 0px 10px 10px
+    padding-left: 40px
+    padding-right: 40px
+    padding-top: 30px
+    padding-bottom: 36px
+
+    +mw(600)
+      padding-left: 15px
+      padding-right: 15px
+
+  &__date-text
+    color: #90969E
+    font-size: 14px
+    font-weight: 500
+    margin-bottom: 15px
+
+  &__date
+    font-size: 36px
+    font-weight: 600
+    color: #E4A76B
+
+.available-not
+
+  & .available__status
+    background: #E9EBEE
+    border-radius: 4px
+    color: #90969E
+
+  & .available__price
+    color: #90969E
+
+  & .available__top
+    border-radius: 10px 10px 0px 0px
+    border-bottom: none
+
+.not-valid
+  border-color: red
+
+  &::placeholder
+    color: red

@@ -1,0 +1,78 @@
+extends ../templates/_office.pug
+include ../helpers/mixins.pug
+
+block asside-active
+  -const active = 3;
+
+block content
+  section.reward.office-container
+    h2.reward__title.office-title Доступные для вывода вознагрождения:
+    .reward__inner 
+      .reward__col-left
+        form.reward__form.form#reward-form.reward-form(method="post" action="#")
+          fieldset.reward-form__field 
+            legend.reward-form__legend Внимательно введите ваши данные перед выводом денежных средств
+            .reward-form__box 
+              label.reward-form__label(for="reward-form-surname") Ваша фамилия
+              input.reward-form__input#reward-form-surname(type="text" name="reward-form-surname" placeholder="Иванов")
+            .reward-form__box 
+              label.reward-form__label(for="reward-form-namen") Ваше имя
+              input.reward-form__input#reward-form-namen(type="text" name="reward-form-namen" placeholder="Иван")
+            .reward-form__box 
+              label.reward-form__label(for="reward-form-second-name") Ваше отчество 
+              input.reward-form__input#reward-form-second-name(type="text" name="reward-form-second-name" placeholder="Иванович")
+            .reward-form__box 
+              label.reward-form__label(for="reward-form-inn") ИНН
+              input.reward-form__input#reward-form-inn(type="text" name="reward-form-inn" placeholder="123456789123")
+            .reward-form__box 
+              label.reward-form__label(for="reward-form-passport") Серия и номер паспорта
+              input.reward-form__input#reward-form-passport(type="text" name="reward-form-passport" placeholder="5050 0022440")
+            .reward-form__box 
+              label.reward-form__label(for="reward-form-passport-date") Дата выдачи паспорта
+              input.reward-form__input#reward-form-passport-date(type="text" name="reward-form-passport-date" placeholder="00.00.0000")
+            .reward-form__box 
+              label.reward-form__label(for="reward-form-passport-who") Кем выдан паспорт
+              input.reward-form__input#reward-form-passport-who(type="text" name="reward-form-passport-who" placeholder="Отделом УФМС России...")
+            .reward-form__box 
+              label.reward-form__label(for="reward-form-birth") Ваша дата рождения
+              input.reward-form__input#reward-form-birth(type="text" name="reward-form-birth" placeholder="00.00.0000")
+            .reward-form__box 
+              label.reward-form__label(for="reward-form-card") Номер карты для вывода средств
+              input.reward-form__input#reward-form-card(type="text" name="reward-form-card" placeholder="5050 4040 3030 2020")
+            .reward-form__box 
+              label.reward-form__label(for="reward-form-sum") Сумма вывода ₽ 
+              input.reward-form__input#reward-form-sum(type="text" name="reward-form-sum" placeholder="1000 ")
+
+            button.reward-form__btn.btn(type="submit") Вывести средства
+            p.reward-form__text нажимая на кнопку, вы подтвержаете согласие с 
+              a.reward-form__link(href="/offer.html") договором оферты 
+              span и 
+              a.reward-form__link(href="/politics.html") политикой конфиденциальности
+
+              
+      .reward__col-right.detail
+        .detail__box 
+          .detail--available.available  
+            .available__top
+              .available__title За реферальную программу:
+              .available__box 
+                h3.available__price 2000 ₽
+                p.available__status доступно для вывода
+          
+          .detail--available.available.available-not  
+            .available__top
+              .available__title За прошедший курс:
+              .available__box 
+                h3.available__price 5000 ₽
+                p.available__status не доступно для вывода
+
+            .available__bottom  
+              p.available__date-text До получения вознагрождения:
+              p.available__date 24 дня 12 часов 20 минут
+          
+          
+
+
+  
+
+  
