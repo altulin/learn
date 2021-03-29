@@ -103,7 +103,7 @@ function scripts() {
     jquery_js,
     jquery_modal_js,
     mmenu_js,
-    jquery_fajax_js,
+    // jquery_fajax_js,
     // jquery_formstyler_js,
     // slick_js,
     path.src.libs_js, // библиотеки из папки libs
@@ -147,7 +147,7 @@ function images() {
   return src(`${sourceFolder}/_img/*.{png,jpg}`) // Берём все изображения из папки источника
     .pipe(newer(projectImg)) // Проверяем, было ли изменено (сжато) изображение ранее
     .pipe(imagemin([
-      imagemin.optipng({ optimizationLevel: 3 }),
+      imagemin.optipng({ optimizationLevel: 5 }),
       imagemin.mozjpeg({ quality: 75, progressive: true }),
 
     ])) // Сжимаем и оптимизируем изображеня

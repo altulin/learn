@@ -30,7 +30,6 @@ body.office-body
             each val, i in link
               li.office-header__item.office-header__item--visible
                 a.office-header__link(href=`${val[1]}` class=(active===i+1 ? `office-header__link--active` : ``))= val[0]
-                //- a.office-header__link(href=(active===i+1 ? `#` : href=`${val[1]}`) class=(active===i+1 ? `office-header__link--active` : ``))= val[0]
 
             li.office-header__item
               a.office-header__link.office-header__link--my(href="/office-my-data.html") Мои данные
