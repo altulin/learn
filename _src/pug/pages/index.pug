@@ -17,7 +17,10 @@ block content
         p.promo__text.size-1 Узнайте как заработать на самом<br> быстрорастущем рынке 
         a.promo__link.btn(href="#programs") Выбрать программу
       figure.promo__img-wrap
-        +img(`girl`, `png`, ``, `promo__img`, `490`)
+        picture   
+          source(srcset="/img/webp/girl.webp" type="image/webp")
+          img(class="promo__img" src="/img/girl.png" srcset="/img/girl.png 1x, /img/girl@2x.png 2x" alt="Научим инвестировать в криптовалюты" width="490" loading="lazy")
+        //- +img(`girl`, `png`, ``, `promo__img`, `490`)
 
   section.profit
     .profit__inner.container 
@@ -47,7 +50,10 @@ block content
         .programs__head
           h2.programs__title.title.size-2 Программы обучения
           figure.programs__img-wrap 
-            +img(`box`, `jpg`, ``, `programs__img`, `259`)
+            //- +img(`box`, `jpg`, ``, `programs__img`, `259`)
+            picture   
+              source(srcset="/img/webp/box.webp" type="image/webp")
+              img(class="programs__img" src="/img/box.jpg" srcset="/img/box.jpg 1x, /img/box@2x.jpg 2x" alt="Научим инвестировать в криптовалюты" width="259" loading="lazy")
         .programs__tariffs.tariffs
           each val in tar
             a.tariffs__wrap(href=`#modal-pay-${val[2]}` rel="modal:open") 
@@ -82,7 +88,10 @@ block content
       .programs-phone__top 
         h2.programs-phone__title.title.size-2 Программы<br> обучения
         figure.programs-phone__img-wrap 
-          +img(`box`, `jpg`, ``, `programs-phone__img`, `259`)
+          //- +img(`box`, `jpg`, ``, `programs-phone__img`, `259`)
+          picture   
+            source(srcset="/img/webp/box.webp" type="image/webp")
+            img(class="programs-phone__img" src="/img/box.jpg" srcset="/img/box.jpg 1x, /img/box@2x.jpg 2x" alt="Научим инвестировать в криптовалюты" width="259" loading="lazy")
 
       .programs-phone__accordion.accordion#programs-phone-accordion
         ul.accordion__list  
@@ -131,7 +140,10 @@ block content
       
 
         figure.comfortable__wrap-img 
-          +img(`comfortable-bg`, `png`, ``, `comfortable__img`, `1440`)
+          //- +img(`comfortable-bg`, `png`, ``, `comfortable__img`, `1440`)
+          picture   
+            source(srcset="/img/webp/comfortable-bg.webp" type="image/webp")
+            img(class="comfortable__img" src="/img/comfortable-bg.png" srcset="/img/comfortable-bg.png 1x, /img/comfortable-bg@2x.png 2x" alt="Научим инвестировать в криптовалюты" width="1440" loading="lazy")
 
   section.faq
     .faq__inner.container 
@@ -140,7 +152,10 @@ block content
         p.faq__text.size-1 Задайте нам вопрос в чате поддрежки пользователей или по email
         a.faq__email(href="mailto:BTC@yandex.ru") Trust BTC@yandex.ru
         figure.faq__img-wrap 
-          +img(`faq-bg`, `png`, ``, `faq__img`, `298`)
+          //- +img(`faq-bg`, `png`, ``, `faq__img`, `298`)
+          picture   
+            source(srcset="/img/webp/faq-bg.webp" type="image/webp")
+            img(class="faq__img" src="/img/faq-bg.png" srcset="/img/faq-bg.png 1x, /img/faq-bg@2x.png 2x" alt="Научим инвестировать в криптовалюты" width="298" loading="lazy")
       .faq__col-right
         .faq__tabs#faq-tabs.faq-tabs 
           - var n = 0;

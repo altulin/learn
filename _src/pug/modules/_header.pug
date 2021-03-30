@@ -2,7 +2,8 @@ header.header(class = document ? 'header--document' : '')
   .header__inner.container
     a.header__logo.logo(href="index.html")
       figure.logo__img-wrap
-        +img(`logo`, `png`, `logo`, `logo__img`, `107`)
+        //- +img(`logo`, `png`, `logo`, `logo__img`, `107`)
+        img.logo__img(src="img/svg/logo-n.svg" width="107" height="20")
 
     nav.header__nav.nav#main-nav
       ul.nav__list
