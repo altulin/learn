@@ -71,6 +71,9 @@ button
 .size-1
   // font-size: rem(18)
   +font-size(1.125rem)
+
+  +mw(600)
+    +font-size(1.25rem)
   // line-height: rem(24)
 
 .size-2
@@ -115,15 +118,15 @@ button
     display: none
 
 .phone-visibility
-  display: none
+  display: none !important
 
   +mw(600)
-    display: block
+    display: block !important
 
 .phone-hidden
 
   +mw(600)
-    display: none
+    display: none !important
 
 *
   // outline: 1px solid tomato
