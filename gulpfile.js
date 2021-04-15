@@ -12,7 +12,7 @@ const jquery_modal_js = `node_modules/jquery-modal/jquery.modal.min.js`;
 const mmenu_js = `node_modules/mmenu-light/dist/mmenu-light.js`;
 const jquery_fajax_js = `node_modules/jquery.fajax/dist/jquery.fajax.min.js`;
 // const jquery_formstyler_js = `node_modules/jquery-form-styler/dist/jquery.formstyler.min.js`;
-// const slick_js = `node_modules/slick-carousel/slick/slick.min.js`;
+const slick_js = `node_modules/slick-carousel/slick/slick.min.js`;
 
 // css
 const sourceCss = `${sourceFolder}/sass/style.sass` // файл для разработки Пользовательские стили
@@ -27,8 +27,8 @@ const mmenu_css = `node_modules/mmenu-light/dist/mmenu-light.css`;
 // const jquery_formstyler_css = `node_modules/jquery-form-styler/dist/jquery.formstyler.css`;
 // const jquery_formstyler_theme_css = `node_modules/jquery-form-styler/dist/jquery.formstyler.theme.css`;
 
-// const slick_css = `node_modules/slick-carousel/slick/slick.css`;
-// const slick_theme_css = `node_modules/slick-carousel/slick/slick-theme.css`;
+const slick_css = `node_modules/slick-carousel/slick/slick.css`;
+const slick_theme_css = `node_modules/slick-carousel/slick/slick-theme.css`;
 
 // img
 // const sourceImg = `${sourceFolder}/_img/**/*`;//папка для разработки
@@ -105,7 +105,7 @@ function scripts() {
     mmenu_js,
     // jquery_fajax_js,
     // jquery_formstyler_js,
-    // slick_js,
+    slick_js,
     path.src.libs_js, // библиотеки из папки libs
     sourceJs, // Пользовательские скрипты, использующие библиотеку, должны быть подключены в конце
   ])
@@ -127,7 +127,7 @@ function styles() {
     mmenu_css,
     // jquery_formstyler_css,
     // jquery_formstyler_theme_css,
-    // slick_css,
+    slick_css,
     // slick_theme_css,
     path.src.libs_css,
     sourceCss

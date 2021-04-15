@@ -8,16 +8,16 @@ block content
   - const arr = [[`Простым языком о Биткойнах и майнинге`, 3], [`Основы блокчейна `, 3], [`Экономика  будущего`, 3], [`Оборудование для майнинга`, 3], [`Альткоины, их разновидности`, 2], [`Правовое регулирование криптовалют в РФ`, 2], [`Различные способы обмана в крипто индустрии и способы их избегать`, 2], [`Способы заработка на криптовалютах`, 1], [`Основы эффективного крипто инвестирвания`, 1], [`Обзор безопасных и надежных бирж`, 1], [`Анализ их возможностей`, 1]];
 
   -const coins = [[`Bitcoin`, `2000`],[`Cardano`, `1000`],[`Cardano`, `1000`],[`Cardano`, `1000`],[`Cardano`, `1000`]]
-  
+
 
   section.promo
     .promo__inner.container
       .promo__content
         h1.promo__title.title.size-2 Научим<br> инвестировать<br> в&nbsp;криптовалюты
-        p.promo__text.size-1 Узнайте как заработать на самом<br> быстрорастущем рынке 
+        p.promo__text.size-1 Узнайте как заработать на самом<br> быстрорастущем рынке
         a.promo__link.btn.phone-hidden(href="#programs") Выбрать программу
       figure.promo__img-wrap
-        picture   
+        picture
           source(srcset="/img/webp/girl.webp" type="image/webp")
           img(class="promo__img" src="/img/girl.png" srcset="/img/girl.png 1x, /img/girl@2x.png 2x" alt="Научим инвестировать в криптовалюты" width="490" loading="lazy")
           //- img(class="promo__img" src="/img/girl.png" srcset="/img/girl.png 1x, /img/girl@2x.png 2x" alt="Научим инвестировать в криптовалюты" width="490" loading="lazy")
@@ -25,23 +25,23 @@ block content
       a.promo__link.btn.phone-visibility(href="#programs-phone") Выбрать программу
 
   section.profit
-    .profit__inner.container 
-      .profit__top 
-        .profit__title-box 
+    .profit__inner.container
+      .profit__top
+        .profit__title-box
           h2.profit__title.title.size-2 <mark>Почему нужно обучаться</mark> крипто-инвестированию
 
-        .profit__text-box.size-1 
-          p.profit__text За последний год инвесторы получили от капиталовложений в&nbsp;биткоин невероятные доходы – более 700%. Такую прибыльность до сих пор не показывала ни одна валюта. Крайне высокая волатильность в сочетании с большим потенциалом привлекают не только долгосрочных инвесторов, но и трейдеров, торгующих на краткосрочных таймфреймах. 
+        .profit__text-box.size-1
+          p.profit__text За последний год инвесторы получили от капиталовложений в&nbsp;биткоин невероятные доходы – более 700%. Такую прибыльность до сих пор не показывала ни одна валюта. Крайне высокая волатильность в сочетании с большим потенциалом привлекают не только долгосрочных инвесторов, но и трейдеров, торгующих на краткосрочных таймфреймах.
 
-      //- .profit__picture 
-        figure.profit__img-wrap 
-          picture   
+      //- .profit__picture
+        figure.profit__img-wrap
+          picture
             source(srcset="/img/webp/coins.webp" type="image/webp")
             img(class="profit__img" src="/img/coins.png" srcset="/img/coins.png 1x, /img/coins@2x.png 2x" alt="Научим инвестировать в криптовалюты" width="1440" loading="lazy")
 
-      
+
       .profit__bottom.coin
-        ul.coin__list  
+        ul.coin__list
           each val, i in coins
             li.coin__item(class=`coin__item--${i+1}`)
               .coin__item-inner
@@ -49,35 +49,35 @@ block content
                 p.coin__percent.size-2= `+${val[1]}`
                   span %
                 p.coin__period за последний год
-              figure.coin__img-wrap 
-                +img((val[0] !== `Bitcoin` ? `btc` : `coin`), `png`, `криптовалюта`, `coin__img`, `300`)
+              figure.coin__img-wrap
+                img.coin__img(src=(val[0] !== `Bitcoin` ? `/img/svg/btc.svg` : `/img/svg/coin.svg`) alt="криптовалюта" width="160" height="211")
 
 
   section.programs.tablet-hidden#programs(name="programs")
     .programs__inner.container
-      .programs__top 
+      .programs__top
         .programs__head
           h2.programs__title.title.size-2 Программы обучения
-          figure.programs__img-wrap 
+          figure.programs__img-wrap
             //- +img(`box`, `jpg`, ``, `programs__img`, `259`)
-            picture   
+            picture
               source(srcset="/img/webp/box.webp" type="image/webp")
               img(class="programs__img" src="/img/box.jpg" srcset="/img/box.jpg 1x, /img/box@2x.jpg 2x" alt="Научим инвестировать в криптовалюты" width="259" loading="lazy")
         .programs__tariffs.tariffs
           each val in tar
-            a.tariffs__wrap(href=`#modal-pay-${val[2]}` rel="modal:open") 
+            a.tariffs__wrap(href=`#modal-pay-${val[2]}` rel="modal:open")
               h3.tariffs__title= val[0]
               p.tariffs__prise.size-2= `${val[1]}`
-                span &nbsp;₽ 
+                span &nbsp;₽
               p.tariffs__text денежный бонус за успешное прохождение программы
               .tariffs__link Выбрать тариф
 
-      ul.programs__list 
+      ul.programs__list
         each val in arr
           li.programs__item.disciplines
             p.disciplines__text= val[0]
             - var n = 3;
-            .disciplines__inner 
+            .disciplines__inner
               while n > 0
                 .disciplines__option
                   +svg(`disc-active`, `24`, (n > val[1] ?  `#E0E3EC` : `#7B57DF`))
@@ -86,33 +86,33 @@ block content
       .programs__bottom
         .programs__tariffs.tariffs
           each val in tar
-            a.tariffs__wrap(href=`#modal-pay-${val[2]}` rel="modal:open") 
+            a.tariffs__wrap(href=`#modal-pay-${val[2]}` rel="modal:open")
               h3.tariffs__title= val[0]
               p.tariffs__prise.size-2= `${val[1]} ₽`
               p.tariffs__text денежный бонус за успешное прохождение программы
               .tariffs__link Выбрать тариф
 
   section.programs-phone.tablet-visibility#programs-phone(name="programs-phone")
-    .programs-phone__inner.container 
-      .programs-phone__top 
+    .programs-phone__inner.container
+      .programs-phone__top
         h2.programs-phone__title.title.size-2 Программы<br> обучения
-        figure.programs-phone__img-wrap 
+        figure.programs-phone__img-wrap
           //- +img(`box`, `jpg`, ``, `programs-phone__img`, `259`)
-          picture   
+          picture
             source(srcset="/img/webp/box.webp" type="image/webp")
             img(class="programs-phone__img" src="/img/box.jpg" srcset="/img/box.jpg 1x, /img/box@2x.jpg 2x" alt="Научим инвестировать в криптовалюты" width="259" loading="lazy")
 
       .programs-phone__accordion.accordion#programs-phone-accordion
-        ul.accordion__list  
+        ul.accordion__list
           each val, i in tar
-            li.accordion__item 
+            li.accordion__item
               a.accordion__link(href=`#prog-tab-${i}` data-type=`${i}`)
                 span.accordion__name= val[0]
                 //- span.accordion__price= val[1]
 
         each val, i in tar
           .accordion__cont(id=`prog-tab-${i}`)
-            ul.accordion__sub-list 
+            ul.accordion__sub-list
               each val in arr
                 li.accordion__sub-item.disc
                   p.disc__text= val[0]
@@ -120,15 +120,15 @@ block content
 
             //- a.accordion__choose-link(href=`#modal-pay-${val[2]}` rel="modal:open") Выбрать тариф
             .programs__tariffs.tariffs.tariffs--phone
-              a.tariffs__wrap(href=`#modal-pay-${val[2]}` rel="modal:open") 
+              a.tariffs__wrap(href=`#modal-pay-${val[2]}` rel="modal:open")
                 h3.tariffs__title= val[0]
                 p.tariffs__prise.size-2= `${val[1]}`
-                  span &nbsp;₽ 
+                  span &nbsp;₽
                 p.tariffs__text денежный бонус за успешное прохождение программы
                 .tariffs__link Выбрать тариф
 
 
-          
+
 
 
 
@@ -136,39 +136,39 @@ block content
 
   section.comfortable
     .comfortable__inner.container
-      .comfortable__content 
+      .comfortable__content
         h2.comfortable__title.title.size-2 Удобный личный кабинет
 
         ul.comfortable__list.container
-          li.comfortable__item 
+          li.comfortable__item
             p.comfortable__text.size-1 Обучайтесь онлайн из любой точки мира
-          li.comfortable__item 
-            p.comfortable__text.size-1 Обучайтесь с любого мобильного или десктоп стройства 
-          li.comfortable__item 
+          li.comfortable__item
+            p.comfortable__text.size-1 Обучайтесь с любого мобильного или десктоп стройства
+          li.comfortable__item
             p.comfortable__text.size-1 Получайте вознагрождение за&nbsp;успешно пройденные курсы
-      
 
-        figure.comfortable__wrap-img 
+
+        figure.comfortable__wrap-img
           //- +img(`comfortable-bg`, `png`, ``, `comfortable__img`, `1440`)
-          picture   
+          picture
             source(srcset="/img/webp/comfortable-bg.webp" type="image/webp")
             img(class="comfortable__img" src="/img/comfortable-bg.png" srcset="/img/comfortable-bg.png 1x, /img/comfortable-bg@2x.png 2x" alt="Научим инвестировать в криптовалюты" width="1440" loading="lazy")
 
   section.faq
-    .faq__inner.container 
+    .faq__inner.container
       .faq__col-left
         h2.faq__title.title.size-2 Частые вопросы, которые задают нам инвесторы
         p.faq__text.size-1 Задайте нам вопрос в чате поддрежки пользователей или по email
         a.faq__email(href="mailto:BTC@yandex.ru") Trust BTC@yandex.ru
-        figure.faq__img-wrap 
+        figure.faq__img-wrap
           //- +img(`faq-bg`, `png`, ``, `faq__img`, `298`)
-          picture   
+          picture
             source(srcset="/img/webp/faq-bg.webp" type="image/webp")
             img(class="faq__img" src="/img/faq-bg.png" srcset="/img/faq-bg.png 1x, /img/faq-bg@2x.png 2x" alt="Научим инвестировать в криптовалюты" width="298" loading="lazy")
       .faq__col-right
-        .faq__tabs#faq-tabs.faq-tabs 
+        .faq__tabs#faq-tabs.faq-tabs
           - var n = 0;
-          ul.faq-tabs__list 
+          ul.faq-tabs__list
             while n < 7
               - n++
               li.faq-tabs__item
@@ -180,43 +180,43 @@ block content
             .faq-tabs__descript.size-1(id=`tab-${n}`) это сокращенное название единицы измерения мощности оборудования для майнинга (хэш/сек)
 
   each val in tar
-    section.modal-pay.container.container--modal.modal(id=`modal-pay-${val[2]}`) 
+    section.modal-pay.container.container--modal.modal(id=`modal-pay-${val[2]}`)
       a.modal-pay__close-link.modal-link(href="#modal-pay" rel="modal:close" aria-label="закрыть")
-      .modal-pay__inner 
-        .modal-pay__col-left.pay 
-          figure.pay__hand-left 
+      .modal-pay__inner
+        .modal-pay__col-left.pay
+          figure.pay__hand-left
             +img(`left`, `png`, ``, `pay__hand-left-img`, `200`)
           figure.pay__hand-right
             +img(`right`, `png`, ``, `pay__hand-right-img`, `200`)
-          
+
           h2.pay__title.title.size-2 Оплатите<br>программу обучения
-          .pay__content.pay-content 
+          .pay__content.pay-content
             .pay-content__title= `Программа: ${val[0]}`
-            .pay-content__text За последний год инвесторы получили от капиталовложений в биткоин невероятные доходы – более 700%. Такую прибыльность до сих пор не показывала ни одна валюта. Крайне высокая волатильность в сочетании с большим потенциалом привлекают не только долгосрочных инвесторов, но и трейдеров, торгующих на краткосрочных таймфреймах. 
-            .pay-content__moduls 
+            .pay-content__text За последний год инвесторы получили от капиталовложений в биткоин невероятные доходы – более 700%. Такую прибыльность до сих пор не показывала ни одна валюта. Крайне высокая волатильность в сочетании с большим потенциалом привлекают не только долгосрочных инвесторов, но и трейдеров, торгующих на краткосрочных таймфреймах.
+            .pay-content__moduls
               .pay-content__moduls-block
                 p.size-1 4 модуля
-              .pay-content__moduls-exercise 
+              .pay-content__moduls-exercise
                 p.size-1 12 занятий
-            p.pay-content__price= `Стоимость: ${val[1]} ₽` 
-            p.pay-content__bonus Денежный бонус за успешное прохождение программы 5000 ₽  
+            p.pay-content__price= `Стоимость: ${val[1]} ₽`
+            p.pay-content__bonus Денежный бонус за успешное прохождение программы 5000 ₽
 
-        .modal-pay__col-right 
+        .modal-pay__col-right
           form.modal-pay__form.form.pay-form#pay-form(method="post" action="#" name="pay-form")
-            fieldset.pay-form__field 
+            fieldset.pay-form__field
               legend.pay-form__legend Внимательно заполните ваши данные перед оплатой и мы пришлем доступ в личный кабинет вам на email
               .pay-form__box
-                label.pay-form__label 
+                label.pay-form__label
                   span.pay-form__label-text Ваше имя
                 input.pay-form__input.not-req(type="text" name="my-name" placeholder="Иван")
 
               .pay-form__box
-                label.pay-form__label 
+                label.pay-form__label
                   span.pay-form__label-text Номер телефона*
                 input.pay-form__input.input-phone(type="text" name="my-phone" placeholder="+7 (___) ___-__-__")
 
               .pay-form__box
-                label.pay-form__label 
+                label.pay-form__label
                   span.pay-form__label-text Ваш email*
                 input.pay-form__input.input-mail(type="text" name="my-email" placeholder="example@mail.ru")
 
@@ -225,24 +225,10 @@ block content
 
   section.modal-success.container.container--modal.modal#modal-success
     a.modal-success__close-link.modal-link(href="#modal-success" rel="modal:close" aria-label="закрыть")
-    .modal-success__inner 
+    .modal-success__inner
       figure.modal-success__img-wrap
         img.modal-success__img(src="/img/svg/success.svg", alt="Ваше обучение успешно  оплачено" width="60" height="60")
       h2.modal-success__title.title Ваше обучение <br>успешно  оплачено
       p.modal-success__text Войдите в личный кабинет, чтобы начать учиться
-      a.modal-success__link.btn(href="/exit.html") Войти 
+      a.modal-success__link.btn(href="/exit.html") Войти
       p.modal-success__note Отправили вам на email логин и пароль для доступа к личному кабинету
-        
-
-
-          
-          
-
-          
-                
-
-              
-
-
-  
-    

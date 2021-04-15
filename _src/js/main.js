@@ -18,27 +18,12 @@ $(function () {
 
   });
 
-  // успешная оплата обучения
-  // $(`.pay-form__btn`).on(`click`, (e) => {
-  //   e.preventDefault();
-  //   $(`#modal-success`).modal();
-  // })
+  // coin slider
 
+  $('.coin__list').slick({
 
-  // $(`#pay-form`).on(`submit`, (e) => {
-  //   const data = $(this).serialize();
-  //   e.preventDefault();
-  //   $.ajax({
-  //     url: 'https://httpbin.org/anything',
-  //     method: 'post',
-  //     dataType: 'json',
-  //     data: data,
-  //     success: function (data) {
-  //       $(`#modal-success`).modal();
-  //       console.log(data)
-  //     }
-  //   });
-  // });
+  });
+
 
 
   //mmenu
@@ -195,10 +180,6 @@ $(function () {
   });
 
 
-  // exit-form
 
-  // $(`#exit-form`).on(`submit`, (e) => {
-
-  // })
 
 });
