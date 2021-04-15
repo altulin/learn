@@ -9,7 +9,7 @@
 *.exe
 *.rar
 node_modules/
-dist/
+/*_dist/
 npm-debug.*
 src/css/app.min.css
 src/css/*.map
