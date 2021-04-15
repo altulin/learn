@@ -2,24 +2,25 @@
   padding-top: 50px
   margin-bottom: 100px
 
-  &__title
+  & h1
     font-weight: 600
     margin-bottom: 20px
+    font-size: 2rem
 
-  &__text
+  & p
     font-size: rem(18)
     line-height: rem(24)
-
-    &--note
-      color: #90969E
-
-    &--head
 
     & + p
       margin-top: 20px
 
     & + h3
       margin-top: 60px
+
+  & h3
+    font-size: rem(20)
+    font-weight: 600
+    margin-bottom: 20px
 
   &__line
     height: 1px
@@ -28,6 +29,9 @@
     box-sizing: border-box
     margin-top: 33px
     margin-bottom: 33px
+
+  & hr + p
+    color: #90969E
 
 .doc-pay
   display: flex

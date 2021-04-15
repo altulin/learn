@@ -33,24 +33,24 @@ block content
         .profit__text-box.size-1 
           p.profit__text За последний год инвесторы получили от капиталовложений в&nbsp;биткоин невероятные доходы – более 700%. Такую прибыльность до сих пор не показывала ни одна валюта. Крайне высокая волатильность в сочетании с большим потенциалом привлекают не только долгосрочных инвесторов, но и трейдеров, торгующих на краткосрочных таймфреймах. 
 
-      .profit__picture 
+      //- .profit__picture 
         figure.profit__img-wrap 
           picture   
             source(srcset="/img/webp/coins.webp" type="image/webp")
             img(class="profit__img" src="/img/coins.png" srcset="/img/coins.png 1x, /img/coins@2x.png 2x" alt="Научим инвестировать в криптовалюты" width="1440" loading="lazy")
 
       
-      //- .profit__bottom.coin
-      //-   ul.coin__list  
-      //-     each val, i in coins
-      //-       li.coin__item(class=`coin__item--${i+1}`)
-      //-         .coin__item-inner
-      //-           h3.coin__name.size-1(class=(val[0] === `Bitcoin` ? `coin__name--hi` : ``))= val[0]
-      //-           p.coin__percent.size-2= `+${val[1]}`
-      //-             span %
-      //-           p.coin__period за последний год
-      //-         figure.coin__img-wrap 
-      //-           +img((val[0] !== `Bitcoin` ? `btc` : `coin`), `png`, `криптовалюта`, `coin__img`, `300`)
+      .profit__bottom.coin
+        ul.coin__list  
+          each val, i in coins
+            li.coin__item(class=`coin__item--${i+1}`)
+              .coin__item-inner
+                h3.coin__name.size-1(class=(val[0] === `Bitcoin` ? `coin__name--hi` : ``))= val[0]
+                p.coin__percent.size-2= `+${val[1]}`
+                  span %
+                p.coin__period за последний год
+              figure.coin__img-wrap 
+                +img((val[0] !== `Bitcoin` ? `btc` : `coin`), `png`, `криптовалюта`, `coin__img`, `300`)
 
 
   section.programs.tablet-hidden#programs(name="programs")

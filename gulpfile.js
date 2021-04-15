@@ -1,4 +1,4 @@
-const projectFolder = `dist`; //Папка продакшн
+const projectFolder = `btc`; //Папка продакшн
 const sourceFolder = `_src`;  // Папка разработки
 
 // js
