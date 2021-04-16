@@ -55,6 +55,7 @@ const path = {
     libs_js: `${sourceFolder}/js/libs/**/*.js`,//
     libs_css: `${sourceFolder}/css/libs/**/*`,//
     ico: `${sourceFolder}/*.ico`,
+    fav: `${sourceFolder}/fav/**/*`,
     files: `${sourceFolder}/files/**/*`
   },
   watch: {
@@ -129,16 +130,16 @@ function styles() {
     // jquery_formstyler_css,
     // jquery_formstyler_theme_css,
     slick_css,
-    // slick_theme_css,
+    slick_theme_css,
     path.src.libs_css,
     sourceCss
 
   ])
     .pipe(sourcemaps.init())
     .pipe(sass())
-    .pipe(concat(projectCssMin)) // Конкатенируем в файл
+    .pipe(concat(projectCss)) // Конкатенируем в файл
     .pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true })) // Создадим префиксы с помощью Autoprefixer
-    .pipe(cleancss({ level: { 1: { specialComments: 0 } }/* , format: 'beautify' */ })) // Минифицируем стили
+    // .pipe(cleancss({ level: { 1: { specialComments: 0 } }/* , format: 'beautify' */ })) // Минифицируем стили
     .pipe(sourcemaps.write(".")) //добавляем карту
     .pipe(dest(`${sourceFolder}/css/`)) // Выгрузим результат в папку
     .pipe(browserSync.stream()) // Сделаем инъекцию в браузер
@@ -227,6 +228,7 @@ function buildcopy() {
     path.src.img,
     path.src.html,
     path.src.ico,
+    path.src.fav,
     path.src.files
   ], { base: `${sourceFolder}` }) // Параметр "base" сохраняет структуру проекта при копировании
     .pipe(dest(`${projectFolder}/`)) // Выгружаем в папку с финальной сборкой

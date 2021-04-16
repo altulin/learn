@@ -19,10 +19,14 @@ $(function () {
   });
 
   // coin slider
+  if ($(window).width() <= 768) {
+    $('.coin__list').slick({
+      // autoplay: true,
+      // autoplaySpeed: 1000
+    });
+  }
 
-  $('.coin__list').slick({
 
-  });
 
 
 
