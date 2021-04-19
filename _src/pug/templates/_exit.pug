@@ -1,15 +1,17 @@
-include ../modules/_head.pug
+doctype html
+html(lang="ru")
+  include ../modules/_head.pug
 
-body.page-body.body-exit
+  body.page-body.body-exit
 
-  header.header-exit 
-    a.header-exit__logo.logo(href="index.html")
-      figure.logo__img-wrap
-        +img(`logo`, `png`, `logo`, `logo__img`, `107`)
+    header.header-exit 
+      a.header-exit__logo.logo(href="index.html")
+        figure.logo__img-wrap
+          +img(`logo`, `png`, `logo`, `logo__img`, `107`)
 
-  main.main-exit 
-    block content
+    main.main-exit 
+      block content
 
-  
-  footer.footer-exit
-  include ../modules/_scripts.pug
+    
+    footer.footer-exit
+    include ../modules/_scripts.pug

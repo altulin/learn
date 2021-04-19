@@ -20,34 +20,34 @@
 <meta name="theme-color" content="#ffffff">
     <link href="/css/style.css" rel="stylesheet">
   </head>
+  <body class="page-body body-exit">
+    <header class="header-exit"> <a class="header-exit__logo logo" href="index.html">
+        <figure class="logo__img-wrap">
+          <picture>
+            <source srcset="/img/webp/logo.webp" type="image/webp"/><img class="logo__img" src="/img/logo.png" alt="logo" width="107" loading="lazy"/>
+          </picture>
+        </figure></a></header>
+    <main class="main-exit"> 
+      <section class="exit container">
+        <form class="exit__form form-exit form" id="exit-form" action="#" method="post" name="exit-form">
+          <fieldset class="form-exit__field"> 
+            <legend class="form-exit__legend size-1">Вход в личный кабинет</legend>
+            <div class="form-exit__box"> 
+              <label class="form-exit__label"><span>Email</span>
+                <input class="form-exit__input req" type="text" placeholder="Email" name="exit-form-email">
+              </label>
+            </div>
+            <div class="form-exit__box"> 
+              <label class="form-exit__label"><span>Пароль</span>
+                <input class="form-exit__input req" type="password" placeholder="Пароль" name="exit-form-pass">
+              </label>
+            </div>
+          </fieldset>
+          <button class="form-exit__btn btn" type="submit">Войти</button><a class="form-exit__forget" href="/exit-pass.html">Забыли пароль?</a>
+        </form>
+      </section>
+    </main>
+    <footer class="footer-exit"></footer>
+    <script src="/js/script.js" type="module"></script>
+  </body>
 </html>
-<body class="page-body body-exit">
-  <header class="header-exit"> <a class="header-exit__logo logo" href="index.html">
-      <figure class="logo__img-wrap">
-        <picture>
-          <source srcset="/img/webp/logo.webp" type="image/webp"/><img class="logo__img" src="/img/logo.png" alt="logo" width="107" loading="lazy"/>
-        </picture>
-      </figure></a></header>
-  <main class="main-exit"> 
-    <section class="exit container">
-      <form class="exit__form form-exit form" id="exit-form" action="#" method="post" name="exit-form">
-        <fieldset class="form-exit__field"> 
-          <legend class="form-exit__legend size-1">Вход в личный кабинет</legend>
-          <div class="form-exit__box"> 
-            <label class="form-exit__label"><span>Email</span>
-              <input class="form-exit__input req" type="text" placeholder="Email" name="exit-form-email">
-            </label>
-          </div>
-          <div class="form-exit__box"> 
-            <label class="form-exit__label"><span>Пароль</span>
-              <input class="form-exit__input req" type="password" placeholder="Пароль" name="exit-form-pass">
-            </label>
-          </div>
-        </fieldset>
-        <button class="form-exit__btn btn" type="submit">Войти</button><a class="form-exit__forget" href="/exit-pass.html">Забыли пароль?</a>
-      </form>
-    </section>
-  </main>
-  <footer class="footer-exit"></footer>
-  <script src="/js/script.js" type="module"></script>
-</body>
