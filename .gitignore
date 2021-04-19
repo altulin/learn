@@ -8,6 +8,7 @@
 *.sublime*
 *.exe
 *.rar
+*.zip
 node_modules/
 /*_dist/
 npm-debug.*

@@ -46,7 +46,7 @@ const path = {
   },
   src: {
     html: `${sourceFolder}/*.html`, //
-    css: `${sourceFolder}/css/style.min.css`, //
+    css: `${sourceFolder}/css/style.css`, //
     min_js: `${sourceFolder}/js/script.min.js`, //
     js: `${sourceFolder}/js/script.js`, //
     img: `${sourceFolder}/img/**/*`, //

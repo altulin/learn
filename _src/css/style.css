@@ -2407,7 +2407,11 @@ button {
         margin-bottom: 30px; } }
   .profit__title mark {
     background-color: transparent;
-    color: #7117E4; }
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#7117e4), to(rgba(113, 23, 228, 0.3)));
+    background-image: -o-linear-gradient(#7117e4, rgba(113, 23, 228, 0.3));
+    background-image: linear-gradient(#7117e4, rgba(113, 23, 228, 0.3));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
   .profit__text-box {
     width: 50%;
     max-width: 550px;
@@ -2461,7 +2465,7 @@ button {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 50% 100%;
-  padding-bottom: 55px; }
+  padding-bottom: 95px; }
   @media screen and (max-width: 768px) {
     .coin__item {
       position: static;
@@ -2472,17 +2476,17 @@ button {
     left: 0; }
   .coin__item--2 {
     left: calc( 20%);
-    top: 70px;
+    top: 82px;
     z-index: 1; }
   .coin__item--3 {
-    left: calc( 40% - 20px); }
+    left: calc( 40% - 25px); }
   .coin__item--4 {
-    left: calc( 60% + 10px);
+    left: calc( 60% - 15px);
     z-index: -1;
-    top: -40px; }
+    top: -55px; }
   .coin__item--5 {
     left: calc( 80% - 60px);
-    top: 130px; }
+    top: 85px; }
 
 .coin__name {
   font-weight: 600;
@@ -2490,8 +2494,16 @@ button {
   color: #3CC8C8;
   font-family: Manrope, "Arial", sans-serif;
   margin-bottom: 10px; }
-  .coin__name--hi {
+  .coin__name--bitcoin {
     color: #E4A76B; }
+  .coin__name--cardano {
+    color: #3CC8C8; }
+  .coin__name--etherium {
+    color: #A6A5D7; }
+  .coin__name--ripple {
+    color: #78BBDC; }
+  .coin__name--litecoin {
+    color: #B6B6B6; }
 
 .coin__percent {
   font-family: Manrope, "Arial", sans-serif;
@@ -2507,6 +2519,14 @@ button {
   line-height: 16px;
   letter-spacing: -0.233333px;
   color: #C5C0CA; }
+
+.coin__img {
+  width: 160px;
+  height: 211px; }
+
+.coin__img-wrap {
+  width: 160px;
+  height: 211px; }
 
 .coin .slick-arrow {
   width: 40px;

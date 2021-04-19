@@ -8,7 +8,7 @@ block content
 
   - const arr = [[`Простым языком о Биткойнах и майнинге`, 3], [`Основы блокчейна `, 3], [`Экономика  будущего`, 3], [`Оборудование для майнинга`, 3], [`Альткоины, их разновидности`, 2], [`Правовое регулирование криптовалют в РФ`, 2], [`Различные способы обмана в крипто индустрии и способы их избегать`, 2], [`Способы заработка на криптовалютах`, 1], [`Основы эффективного крипто инвестирвания`, 1], [`Обзор безопасных и надежных бирж`, 1], [`Анализ их возможностей`, 1]];
 
-  -const coins = [[`Bitcoin`, `2000`],[`Cardano`, `1000`],[`Cardano`, `1000`],[`Cardano`, `1000`],[`Cardano`, `1000`]]
+  -const coins = [[`Bitcoin`, `780`,`bitcoin`],[`Cardano`, `1900`,`cardano`],[`Etherium`, `1200`,`etherium`],[`Ripple`, `190`,`ripple`],[`Litecoin`, `400`,`litecoin`]]
 
 
   section.promo
@@ -46,12 +46,12 @@ block content
           each val, i in coins
             li.coin__item(class=`coin__item--${i+1}`)
               .coin__item-inner
-                h3.coin__name.size-1(class=(val[0] === `Bitcoin` ? `coin__name--hi` : ``))= val[0]
+                h3.coin__name.size-1(class=`coin__name--${val[2]}`)= val[0]
                 p.coin__percent.size-2= `+${val[1]}`
                   span %
                 p.coin__period за последний год
               figure.coin__img-wrap
-                img.coin__img(src=(val[0] !== `Bitcoin` ? `/img/svg/btc.svg` : `/img/svg/coin.svg`) alt="криптовалюта" width="160" height="211")
+                img.coin__img(src=(`/img/svg/${val[2]}.svg`) alt="криптовалюта" width="160" height="211")
 
 
   section.programs.tablet-hidden#programs(name="programs")
