@@ -86,7 +86,8 @@ const { src, dest, parallel, watch, series } = require('gulp'),
   replace = require('gulp-replace'),
   svgstore = require('gulp-svgstore'),
   rename = require("gulp-rename"),
-  webp = require('gulp-webp')
+  webp = require('gulp-webp'),
+  prettify = require('gulp-html-prettify')
 
 
 
@@ -264,6 +265,14 @@ function transformPug() {
     .pipe(browserSync.stream()) // Сделаем инъекцию в браузер
 }
 
+function htmlbeautify() {
+
+
+  return src(path.src.html)
+    .pipe(prettify({ indent_char: ' ', indent_size: 2 }))
+    .pipe(dest(`${sourceFolder}`))
+}
+
 
 
 exports.browsersync = browsersync;
@@ -281,8 +290,9 @@ exports.replace = replace;
 // exports.svgstore = svgstore;
 exports.rename = rename;
 exports.createWebp = createWebp;
+exports.htmlbeautify = htmlbeautify;
 
 
-exports.default = parallel(cleanImg, styles, scripts, images, imagesSvg, createSprite, createWebp, transformPug, browsersync, startwatch);
+exports.default = parallel(cleanImg, styles, scripts, images, imagesSvg, createSprite, createWebp, transformPug, browsersync, htmlbeautify, startwatch);
 // exports.build = series(clean, styles, scripts, images, buildcopy);
-exports.build = series(cleanImg, styles, scripts, images, imagesSvg, createSprite, createWebp, transformPug, buildcopy);
+exports.build = series(cleanImg, styles, scripts, images, imagesSvg, createSprite, createWebp, transformPug, htmlbeautify, buildcopy);
