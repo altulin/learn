@@ -16,7 +16,7 @@ block content
         .programs__head
           h2.programs__title.title.size-2 Программы обучения
           figure.programs__img-wrap 
-            +img(`box`, `jpg`, ``, `programs__img`, `259`)
+            +img_simple(`box`, `png`, ``, `programs__img`, `259`)
         .programs__tariffs.tariffs
           each val in tar
             a.tariffs__wrap(href=`#modal-pay-${val[2]}` rel="modal:open") 
@@ -51,7 +51,7 @@ block content
       .programs-phone__top 
         h2.programs-phone__title.title.size-2 Программы<br> обучения
         figure.programs-phone__img-wrap 
-          +img(`box`, `png`, ``, `programs-phone__img`, `259`)
+          +img_simple(`box`, `png`, ``, `programs-phone__img`, `259`)
 
       .programs-phone__accordion.accordion#programs-phone-accordion
         ul.accordion__list  

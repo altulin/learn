@@ -17,3 +17,7 @@ mixin img(name, type, alt, className, width)
   picture
     source(srcset=`/img/webp/${name}.webp` type=`image/webp`)
     img(class=`${className}` src=`/img/${name}.${type}` alt=alt width=width loading="lazy")
+
+mixin img_simple(name, type, alt, className, width)
+  picture
+    img(class=`${className}` src=`/img/${name}.${type}` alt=alt width=width loading="lazy")

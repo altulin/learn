@@ -3369,15 +3369,15 @@ button {
 .theory-block__item + li {
   margin-top: 40px; }
 
-.theory-block__title {
+.theory-block h3 {
   font-size: calc(1.275rem + 0.3vw);
   font-weight: 600;
   margin-bottom: 20px; }
   @media (min-width: 1200px) {
-    .theory-block__title {
+    .theory-block h3 {
       font-size: 1.5rem; } }
 
-.theory-block__text {
+.theory-block p {
   font-size: 16px;
   color: #46404C; }
 
@@ -3683,6 +3683,9 @@ button {
 .test-form__input[type="radio"]:checked ~ label::after {
   content: ""; }
 
+.test-form__input[type="checkbox"]:checked ~ label::after {
+  content: ""; }
+
 .progress__title {
   font-size: 14px;
   font-weight: 500;
@@ -3712,6 +3715,8 @@ button {
     width: 60%; }
   .progress__bar--80::before {
     width: 80%; }
+  .progress__bar--100::before {
+    width: 100%; }
 
 .result {
   background: #FFFFFF;
