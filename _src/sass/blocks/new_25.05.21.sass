@@ -1,0 +1,587 @@
+/* apdate 25.05.2021 */
+.steps
+  margin-top: 100px
+  margin-bottom: 50px
+
+  +mw(768)
+    margin-top: 0
+    margin-bottom: 40px
+
+  &__title
+    margin-left: auto
+    margin-right: auto
+    text-align: center
+    margin-bottom: 40px
+
+    +mw(768)
+      margin-bottom: 20px
+
+    & mark
+      background-color: transparent
+      background-image: linear-gradient(rgba(#7117E4, 1), rgba(#7117E4, 0.3))
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+
+  &__list
+    display: flex
+    justify-content: space-between
+
+    +mw(768)
+      max-width: 300px
+      margin-left: auto
+      margin-right: auto
+
+  & .slick-arrow
+    width: 40px
+    height: 40px
+    background-image: url(/img/svg/arr-slider.svg)
+    background-repeat: no-repeat
+    background-size: 14px 20px
+    background-position: center center
+
+    &::before
+      content: none
+
+  & .slick-next
+    right: -15px
+
+  & .slick-prev
+    left: -15px
+    transform: rotate(180deg) translateY(20px)
+    z-index: 1
+
+  &__item
+
+.steps-card
+  width: calc(25% - (60px / 4))
+  background: #FFFFFF
+  box-shadow: -10px 10px 20px rgba(145, 145, 145, 0.1)
+  border-radius: 10px
+  padding: 40px
+
+  +mw(768)
+    min-height: 354px
+    width: 100%
+    box-shadow: none
+
+  &__img-wrap
+    width: 100px
+    height: 112px
+    background-repeat: no-repeat
+    background-position: 50% 100%
+    background-size: contain
+    margin-bottom: 25px
+
+    +mw(768)
+      margin-left: auto
+      margin-right: auto
+
+  &__img-wrap--reg
+    background-image: url(/img/reg.png)
+
+  &__title
+    font-weight: 600
+    font-size: 20px
+    line-height: 24px
+    color: #46404C
+    margin-bottom: 20px
+
+    +mw(768)
+      text-align: center
+
+  &__text
+    font-size: 16px
+    line-height: 20px
+    color: #46404C
+
+    +mw(768)
+      text-align: center
+
+  &__img-wrap--education
+    background-image: url(/img/education.png)
+
+  &__img-wrap--power
+    background-image: url(/img/power.png)
+
+  &__img-wrap--profit
+    background-image: url(/img/profit.png)
+
+// ====================================
+
+.calc
+  margin-bottom: 60px
+
+  +mw(768)
+    margin-top: 60px
+    margin-bottom: 20px
+
+  &__inner
+    display: flex
+    align-items: center
+
+  &__left
+    width: 100%
+    max-width: 670px
+
+  &__title
+    margin-bottom: 60px
+
+    & mark
+      background-color: transparent
+      background-image: linear-gradient(rgba(#7117E4, 1), rgba(#7117E4, 0.3))
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+
+  &__box
+    display: flex
+    justify-content: space-between
+    margin-bottom: 80px
+
+    +mw(600)
+      flex-direction: column
+      margin-bottom: 60px
+
+  &__label
+    width: calc( 50% - 15px )
+    display: flex
+    flex-direction: column
+    position: relative
+
+    +mw(600)
+      width: 100%
+
+      & + label
+        margin-top: 40px
+
+  &__label-text
+    font-size: 16px
+    line-height: 22px
+    color: #8D8D93
+    margin-bottom: 8px
+
+  &__range
+    font-size: 18px
+    line-height: 24px
+    color: #131213
+    padding: 21px 22px
+    background-color: #F0F0F4
+    border: 1px solid #E6E6EA
+    border-radius: 4px 4px 4px 0
+
+  &__list
+    display: flex
+    justify-content: space-between
+    margin-bottom: 80px
+
+    +mw(600)
+      flex-direction: column
+      margin-bottom: 60px
+
+  &__item
+
+    +mw(600)
+      display: flex
+      justify-content: space-between
+      align-items: center
+
+      & + li
+        margin-top: 30px
+
+  &__term
+    font-size: 18px
+    line-height: 24px
+    color: #131213
+    margin-bottom: 10px
+
+  &__description
+    font-weight: 600
+    font-size: 42px
+    line-height: 48px
+    color: #131213
+
+    +mw(768)
+      font-size: 36px
+
+  &__link
+
+    &--desctop
+      +mw(768)
+        display: none
+
+    &--tablet
+      display: none
+
+      +mw(768)
+        display: block
+
+  &__right
+    max-width: 397px
+    width: 30%
+    margin-left: auto
+    margin-right: auto
+
+    +mw(768)
+      display: none
+
+  &__img-wrap
+    height: 0
+    width: 100%
+    padding-top: 145%
+    background-image: url(/img/calc-bg.png)
+    background-size: contain
+
+.irs
+  display: block
+  position: absolute
+  bottom: -5px
+  left: 0
+  width: 100%
+
+  &-single
+    position: absolute
+
+  &-min
+    display: none
+
+  &-max
+    display: none
+
+  &-single
+    width: 20px
+    height: 20px
+    font-size: 0
+    background: #FFFFFF
+    border: 2px solid #903EF9
+    border-radius: 50%
+    z-index: 1
+
+  &-grid
+    display: none
+
+  &-bar
+    position: absolute
+    height: 2px
+    bottom: 3px
+    background-color: #903EF9
+
+.deposit
+  padding-top: 250px
+  background-image: url(/img/deposit-left.png), url(/img/deposit-right.png)
+  background-size: 24% auto
+  background-position: 0 6%, 100% 15%
+  background-repeat: no-repeat
+  margin-bottom: 60px
+
+  +mw(1000)
+    background-image: none
+    padding-top: 70px
+
+  &__title
+    text-align: center
+    margin-bottom: 43px
+
+    & mark
+      background-color: transparent
+      background-image: linear-gradient(rgba(#7117E4, 1), rgba(#7117E4, 0.3))
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+
+  &__subtitle
+    font-size: 18px
+    line-height: 24px
+    text-align: center
+    color: #46404C
+    max-width: 433px
+    margin-left: auto
+    margin-right: auto
+    margin-bottom: 57px
+
+  &__list
+    display: flex
+    justify-content: space-between
+
+    +mw(768)
+      width: 100%
+      flex-direction: column
+
+  &__item
+    width: calc((100% / 3) - (40px / 3))
+    box-shadow: -10px 10px 20px rgba(144, 144, 144, 0.1)
+    border-radius: 10px
+    overflow: hidden
+
+    +mw(768)
+      box-shadow: none
+      width: 100%
+
+      & + li
+        margin-top: 30px
+
+.deposit-card
+  display: flex
+  flex-direction: column
+
+  &__head
+    padding: 40px 40px 24px 40px
+    background: linear-gradient(360deg, #A584FF 0%, #7551DA 66.67%)
+    flex-grow: 1
+
+    +mw(768)
+      padding-left: 15px
+      padding-right: 15px
+
+  &__title
+    font-size: 42px
+    line-height: 51px
+    color: #FFFFFF
+    margin-bottom: 20px
+
+  &__item
+    padding-left: 20px
+    padding-right: 20px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    font-size: 18px
+    line-height: 40px
+    color: #fff
+
+  &__item--main
+    background-color: rgba(#FFFFFF, 0.2)
+    box-shadow: -10px 10px 20px rgba(145, 145, 145, 0.1)
+    border-radius: 5px
+
+  &__bottom
+    padding: 40px
+
+    +mw(768)
+      padding-left: 15px
+      padding-right: 15px
+
+  &__text
+    font-weight: 500
+    font-size: 18px
+    line-height: 20px
+    color: #46404C
+    max-width: 195px
+    margin-bottom: 28px
+
+  &__label
+    display: flex
+    flex-direction: column
+    margin-bottom: 55px
+    position: relative
+
+    &-text
+      font-size: 14px
+      line-height: 20px
+      color: #46404C
+      margin-bottom: 23px
+      display: block
+
+  &__box
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  &__profit
+    font-size: 18px
+    line-height: 18px
+    color: #46404C
+    max-width: 107px
+
+  &__profit-val
+    font-weight: bold
+    font-size: 42px
+    line-height: 51px
+    color: #47404C
+
+    +mw(768)
+      font-size: 36px
+
+  & .irs-grid
+    display: block
+    position: absolute
+    bottom: -14px
+
+  & .irs-grid-text
+    position: absolute
+    font-size: 18px
+    line-height: 24px
+    color: #903EF9
+
+.farm
+  padding-top: 40px
+
+  &__title
+
+  &__inner
+    display: flex
+    justify-content: space-between
+
+  &__col
+
+  &__col--left
+    width: 100%
+    max-width: 680px
+
+  &__miners
+
+  &__subtitle
+    font-weight: 600
+    font-size: 20px
+    line-height: 24px
+    color: #47404C
+    margin-bottom: 21px
+
+  &__profit
+
+  &__col--right
+    width: 100%
+    max-width: 340px
+    margin-left: 20px
+
+  &__stat
+
+.office-container
+
+.office-title
+
+.miners
+  background: #FFFFFF
+  border-radius: 10px
+  padding: 40px 40px 54px 40px
+  margin-bottom: 40px
+
+  &__list
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+
+  &__item--active
+
+  &__link
+    display: block
+
+    &:hover
+
+      & .miners__img-wrap
+        opacity: 0.8
+
+  &__link--active
+
+  &__img-wrap
+    min-height: 170px
+    background-color: #F8F9FC
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    transition: 0.2s
+
+    &::after
+      content: ""
+      background-image: url(/img/plus.png)
+      width: 40px
+      height: 40px
+      display: block
+      background-repeat: no-repeat
+      background-size: contain
+
+  &__img-wrap--active
+    background-image: url(/img/miners-bg-active.png)
+    background-size: contain
+
+    &::after
+      content: none
+
+  &__text
+    font-weight: 600
+    font-size: 16px
+    line-height: 18px
+    color: #46404C
+    padding: 15px 20px
+
+  &__text--active
+
+  &__item
+    box-shadow: 5px 5px 10px #F8F9FC
+    border-radius: 4px
+    width: calc((100% / 3) - 20px)
+    margin-bottom: 30px
+    border: 1px solid #E6E6EA
+    overflow: hidden
+
+.farm-profit
+
+  &__chart
+
+  &__box
+
+  &__profit
+
+  &__proc
+
+  &__link
+
+.proc
+  font-weight: 600
+  font-size: 12px
+  line-height: 16px
+  padding-left: 5px
+  padding-top: 2px
+  padding-bottom: 2px
+  padding-right: 5px
+  border-radius: 2px
+  display: flex
+  align-items: center
+
+  &::before
+    width: 8px
+    height: 8px
+    display: block
+    margin-right: 3px
+    content: ""
+
+.proc--plus
+  background-color: #D7FABF
+  color: #4AAF05
+
+  &::before
+    background-image: url(/img/svg/arrow-up.svg)
+
+.stat
+
+  &__title
+
+  &__list
+
+  &__list--vertical
+
+  &__item
+
+  &__term
+
+  &__def
+
+  &__box
+    display: flex
+    align-items: center
+
+  &__def--rub
+
+  &__proc
+    margin-left: 10px
+
+.stat--vertical
+
+.size-1
+
+.proc--minus
+  background-color: #FFD1D7
+  color: #FF5669
+
+  &::before
+    background-image: url(/img/svg/arrow-down.svg)
+
+/* */

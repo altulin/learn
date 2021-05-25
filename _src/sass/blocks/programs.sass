@@ -30,6 +30,14 @@
     padding: 40px 30px
     border-radius: 10px
 
+    +mw(768)
+      padding-left: 15px
+      padding-right: 15px
+
+    &--current
+      pointer-events: none
+
+    &--current,
     &:hover
       background: linear-gradient(360deg, #7551DA 0%, #A584FF 100%)
 
@@ -55,6 +63,10 @@
     margin-bottom: 10px
     color: $text
     text-align: center
+
+    &--current
+      font-size: 36px
+      margin-bottom: 16px
 
   &__text
     font-size: 14px

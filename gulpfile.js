@@ -14,6 +14,7 @@ const mmenu_js = `node_modules/mmenu-light/dist/mmenu-light.js`;
 const jquery_fajax_js = `node_modules/jquery.fajax/dist/jquery.fajax.min.js`;
 // const jquery_formstyler_js = `node_modules/jquery-form-styler/dist/jquery.formstyler.min.js`;
 const slick_js = `node_modules/slick-carousel/slick/slick.min.js`;
+const rangeslider_js = `node_modules/ion-rangeslider/js/ion.rangeSlider.min.js`;
 
 // css
 const sourceCss = `${sourceFolder}/sass/style.sass` // файл для разработки Пользовательские стили
@@ -110,6 +111,7 @@ function scripts() {
     // jquery_formstyler_js,
     slick_js,
     path.src.libs_js, // библиотеки из папки libs
+    rangeslider_js,
     sourceJs, // Пользовательские скрипты, использующие библиотеку, должны быть подключены в конце
   ])
     .pipe(sourcemaps.init())

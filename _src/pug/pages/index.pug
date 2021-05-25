@@ -53,6 +53,29 @@ block content
               figure.coin__img-wrap
                 img.coin__img(src=(`/img/svg/${val[2]}.svg`) alt="криптовалюта" width="160" height="211")
 
+  section.steps
+    .steps__inner.container
+      h2.steps__title.title.size-2 <mark>4 простых шага</mark>  <br>для начала обучения
+
+      ul.steps__list
+        li.steps__item.steps-card
+          figure.steps-card__img-wrap.steps-card__img-wrap--reg
+          h3.steps-card__title Зарегистрируйтесь
+          p.steps-card__text Пройдите регистрацию в личном кабинете
+        li.steps__item.steps-card
+          figure.steps-card__img-wrap.steps-card__img-wrap--education
+          h3.steps-card__title Пройдите обучение
+          p.steps-card__text Получите необходимые качественные знания
+        li.steps__item.steps-card
+          figure.steps-card__img-wrap.steps-card__img-wrap--power
+          h3.steps-card__title Арендуйте мощность
+          p.steps-card__text Просто выберите свою мощность и оплатите ее
+        li.steps__item.steps-card
+          figure.steps-card__img-wrap.steps-card__img-wrap--profit
+          h3.steps-card__title Получайте прибыль
+          p.steps-card__text Докупайте оборудование, получайте доход и выводите средства когда удобно.
+
+
 
   section.programs.tablet-hidden#programs(name="programs")
     .programs__inner.container
@@ -130,10 +153,119 @@ block content
 
 
 
+  section.calc
+    .calc__inner.container
+      .calc__left
+        h2.calc__title.title.size-2 <mark>Расчитайте потенциальную</mark>  доходность инвестиций
+
+        .calc__box
+
+          label.calc__label(for="range-invest")
+            span.calc__label-text Инвестиции в рублях
+            input.calc__range.calc__range--invest#range-invest(type="text")
+
+          label.calc__label(for="range-power")
+            span.calc__label-text Мощность в GH/s
+            input.calc__range.calc__range--power#range-power(type="text")
 
 
 
+        ul.calc__list
+          li.calc__item
+            p.calc__term заработок в день
+            p.calc__description 750
+          li.calc__item
+            p.calc__term заработок в месяц
+            p.calc__description 75 000
+          li.calc__item
+            p.calc__term заработок в год
+            p.calc__description 750 000
 
+        a.calc__link.calc__link--desctop.btn(href="#programs") Начать обучение
+        a.calc__link.calc__link--tablet.btn(href="#programs-phone") Начать обучение
+
+
+
+      .calc__right
+        figure.calc__img-wrap
+
+
+  section.deposit
+    .deposit__inner.container
+      h2.deposit__title.title.size-2 <mark>Реферальная</mark> <br>программа BTC Trust
+      p.deposit__subtitle BTC Trust предоставляет возможность всем желающим зарабатывать от&nbsp;15% до 40% от&nbsp;депозитов людей, которых вы пригласили.
+
+      ul.deposit__list
+        li.deposit__item.deposit-card
+          .deposit-card__head
+            h3.deposit-card__title Старт
+            ul.deposit-card__list
+              li.deposit-card__item.deposit-card__item--main
+                p.deposit-card__term 1 уровень
+                p.deposit-card__proc 15%
+
+          .deposit-card__bottom
+            p.deposit-card__text Расчитайте сколько вы можете заработать:
+            label.deposit-card__label(for="deposit-range-start")
+              span.deposit-card__label-text Количество приглашенных людей:
+              input.deposit-card__input.deposit-card__input--start#deposit-range-start(type="hidden")
+
+            .deposit-card__box
+              p.deposit-card__profit Ваш доход составит до:
+              p.deposit-card__profit-val 30 000
+
+
+        li.deposit__item.deposit-card
+          .deposit-card__head
+            h3.deposit-card__title Взлет
+            ul.deposit-card__list
+              li.deposit-card__item.deposit-card__item--main
+                p.deposit-card__term 1 уровень
+                p.deposit-card__proc 15%
+              li.deposit-card__item
+                p.deposit-card__term 2 уровень
+                p.deposit-card__proc 10%
+
+          .deposit-card__bottom
+            p.deposit-card__text Расчитайте сколько вы можете заработать:
+            label.deposit-card__label(for="deposit-range-takeoff")
+              span.deposit-card__label-text Количество приглашенных людей:
+              input.deposit-card__input.deposit-card__input--takeoff#deposit-range-takeoff(type="hidden")
+
+            .deposit-card__box
+              p.deposit-card__profit Ваш доход составит до:
+              p.deposit-card__profit-val 30 000
+
+
+        li.deposit__item.deposit-card
+          .deposit-card__head
+            h3.deposit-card__title Премиум
+            ul.deposit-card__list
+              li.deposit-card__item.deposit-card__item--main
+                p.deposit-card__term 1 уровень
+                p.deposit-card__proc 20%
+              li.deposit-card__item
+                p.deposit-card__term 2 уровень
+                p.deposit-card__proc 10%
+              li.deposit-card__item
+                p.deposit-card__term 3 уровень
+                p.deposit-card__proc 5%
+              li.deposit-card__item
+                p.deposit-card__term 4 уровень
+                p.deposit-card__proc 3%
+              li.deposit-card__item
+                p.deposit-card__term 5 уровень
+                p.deposit-card__proc 2%
+
+          .deposit-card__bottom
+            p.deposit-card__text Расчитайте сколько вы можете заработать:
+            label.deposit-card__label(for="deposit-range-prem")
+              span.deposit-card__label-text Количество приглашенных людей:
+              input.deposit-card__input.deposit-card__input--prem#deposit-range-prem(type="hidden")
+
+            .deposit-card__box
+              p.deposit-card__profit Ваш доход составит до:
+              p.deposit-card__profit-val 30 000
 
   section.comfortable
     .comfortable__inner.container

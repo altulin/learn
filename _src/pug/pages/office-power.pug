@@ -1,0 +1,65 @@
+extends ../templates/_office.pug
+include ../helpers/mixins.pug
+
+block asside-active
+  -const active = 1;
+
+block content
+  -const heads = [`Простым языком о Биткойнах и майнинге`,`Основы блокчейна`,`Экономика будущего`,`Оборудование для майнинга`]
+  section.farm.office-container
+    h2.farm__title.office-title Ваша облачная криптоферма
+    .farm__inner
+      .farm__col.farm__col--left
+        .farm__miners.miners
+          h3.farm__subtitle Ваши майнеры
+          ul.miners__list
+            li.miners__item.miners__item--active
+              a.miners__link.miners__link--active(href="")
+                figure.miners__img-wrap.miners__img-wrap--active
+                p.miners__text.miners__text--active 4535 GH/s
+
+            -let n = 0
+            while n < 8
+              -n++
+              li.miners__item
+                a.miners__link.miners__link(href="")
+                  figure.miners__img-wrap.miners__img-wrap
+                  p.miners__text.miners__text купить мощность
+
+        .farm__profit.farm-profit
+          h3.farm__subtitle Доходность ваших майнеров за месяц
+          .farm-profit__chart
+          .farm-profit__box
+            p.farm-profit__profit Доходность:
+              span.farm-profit__sum 54 200 ₽
+              span.farm-profit__proc.proc.proc--plus 7,00%
+
+            a.farm-profit__link(href="") Увеличить доход
+
+      .farm__col.farm__col--right
+        .farm__stat.stat.stat--vertical
+
+          h3.stat__title.size-1 Статистика вашей <br>облачной криптофермы
+
+          ul.stat__list.stat__list--vertical
+            li.stat__item
+              span.stat__term Майнеры/мощность:
+              span.stat__def.size-1 5 шт./ 4535 GH/s
+
+            li.stat__item
+              span.stat__term Доход за сегодня:
+              .stat__box
+                span.stat__def.size-1.stat__def--rub 2 540
+                span.stat__proc.proc.proc--plus 4,54%
+
+            li.stat__item
+              span.stat__term Средний доход в день:
+              .stat__box
+                span.stat__def.size-1.stat__def--rub 1 823
+                span.stat__proc.proc.proc--minus 2,18%
+
+            li.stat__item
+              span.stat__term Доход за все время:
+              .stat__box
+                span.stat__def.size-1.stat__def--rub 54 800
+                span.stat__proc.proc.proc--plus 24,54%

@@ -5,7 +5,7 @@ block asside-active
   -const active = 2;
 
 block content
-  - const tar = [[`Старт`,`10 000`, `start`],[`Взлет`,`20 000`, `takeoff`],[`Премиум`,`30 000`, `premium`]];
+  - const tar = [[`Старт`,`Ваш тариф`, `start`],[`Взлет`,`20 000`, `takeoff`],[`Премиум`,`30 000`, `premium`]];
 
   - const arr = [[`Простым языком о Биткойнах и майнинге`, 3], [`Основы блокчейна `, 3], [`Экономика  будущего`, 3], [`Оборудование для майнинга`, 3], [`Альткоины, их разновидности`, 2], [`Правовое регулирование криптовалют в РФ`, 2], [`Различные способы обмана в крипто индустрии и способы их избегать`, 2], [`Способы заработка на криптовалютах`, 1], [`Основы эффективного крипто инвестирвания`, 1], [`Обзор безопасных и надежных бирж`, 1], [`Анализ их возможностей`, 1]];
 
@@ -19,12 +19,12 @@ block content
             +img_simple(`box`, `png`, ``, `programs__img`, `259`)
         .programs__tariffs.tariffs
           each val in tar
-            a.tariffs__wrap(href=`#modal-pay-${val[2]}` rel="modal:open") 
+            a.tariffs__wrap(href=`#modal-pay-${val[2]}` rel="modal:open" class=(`${val[1]}` === `Ваш тариф`?`tariffs__wrap--current`: ``)) 
               h3.tariffs__title= val[0]
-              p.tariffs__prise.size-2= `${val[1]}`
-                span &nbsp;₽ 
+              p.tariffs__prise.size-2(class=(`${val[1]}` === `Ваш тариф`?`tariffs__prise--current`: ``))= `${val[1]}`
+                span(class=(`${val[1]}` === `Ваш тариф`?`hidden`: ``)) &nbsp;₽ 
               p.tariffs__text денежный бонус за успешное прохождение программы
-              .tariffs__link Выбрать тариф
+              .tariffs__link(class=(`${val[1]}` === `Ваш тариф`?`hidden`: ``)) Выбрать тариф
 
       ul.programs__list 
         each val in arr
@@ -40,11 +40,12 @@ block content
       .programs__bottom
         .programs__tariffs.tariffs
           each val in tar
-            a.tariffs__wrap(href=`#modal-pay-${val[2]}` rel="modal:open") 
+            a.tariffs__wrap(href=`#modal-pay-${val[2]}` rel="modal:open" class=(`${val[1]}` === `Ваш тариф`?`tariffs__wrap--current`: ``)) 
               h3.tariffs__title= val[0]
-              p.tariffs__prise.size-2= `${val[1]} ₽`
+              p.tariffs__prise.size-2(class=(`${val[1]}` === `Ваш тариф`?`tariffs__prise--current`: ``))= `${val[1]}`
+                span(class=(`${val[1]}` === `Ваш тариф`?`hidden`: ``)) &nbsp;₽ 
               p.tariffs__text денежный бонус за успешное прохождение программы
-              .tariffs__link Выбрать тариф
+              .tariffs__link(class=(`${val[1]}` === `Ваш тариф`?`hidden`: ``)) Выбрать тариф
 
   section.programs-phone.tablet-visibility#programs.office-programs--tablet
     .programs-phone__inner.container 
@@ -69,14 +70,13 @@ block content
                   p.disc__text= val[0]
                   +svg(`disc-active`, `24`, ((val[1] - (2- i)) > 0?  `#7B57DF` : `#E0E3EC`))
 
-            //- a.accordion__choose-link(href=`#modal-pay-${val[2]}` rel="modal:open") Выбрать тариф
             .programs__tariffs.tariffs.tariffs--phone
-              a.tariffs__wrap(href=`#modal-pay-${val[2]}` rel="modal:open") 
+              a.tariffs__wrap(href=`#modal-pay-${val[2]}` rel="modal:open" class=(`${val[1]}` === `Ваш тариф`?`tariffs__wrap--current`: ``)) 
                 h3.tariffs__title= val[0]
-                p.tariffs__prise.size-2= `${val[1]}`
-                  span &nbsp;₽ 
+                p.tariffs__prise.size-2(class=(`${val[1]}` === `Ваш тариф`?`tariffs__prise--current`: ``))= `${val[1]}`
+                  span(class=(`${val[1]}` === `Ваш тариф`?`hidden`: ``)) &nbsp;₽ 
                 p.tariffs__text денежный бонус за успешное прохождение программы
-                .tariffs__link Выбрать тариф
+                .tariffs__link(class=(`${val[1]}` === `Ваш тариф`?`hidden`: ``)) Выбрать тариф
 
 
   each val in tar

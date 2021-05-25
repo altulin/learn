@@ -8,7 +8,7 @@ $(function () {
 
   // programs-phone tabs
   $('#programs-phone-accordion').responsiveTabs({
-    startCollapsed: 'accordion',
+    startCollapsed: false
 
   });
 
@@ -26,8 +26,75 @@ $(function () {
     });
   }
 
+  //steps slider
+  if ($(window).width() <= 768) {
+    $('.steps__list').slick({
+      // autoplay: true,
+      // autoplaySpeed: 1000
+    });
+  }
 
+  // range input
+  let range_invest = $(".calc__range--invest");
+  let range_power = $(".calc__range--power")
 
+  range_invest.ionRangeSlider({
+    grid: true,
+    min: 1000,
+    max: 1000000,
+    from: 100000,
+    step: 1000,
+  });
+
+  range_power.ionRangeSlider({
+    grid: true,
+    min: 1000,
+    max: 1000000,
+    from: 500000,
+    step: 1000,
+
+  });
+
+  range_invest.on(`change`, (e) => {
+    const data = $(e.target).prop('value');
+    range_power.prop('value', data);
+  });
+
+  range_power.on(`change`, (e) => {
+    const data = $(e.target).prop('value');
+    range_invest.prop('value', data);
+  });
+
+  // deposit range
+  const deposit_inputs = $(`.deposit-card__input`);
+
+  if (deposit_inputs.length > 0) {
+    deposit_inputs.map((i, item) => {
+      return $(item).ionRangeSlider({
+        grid: true,
+        min: 0,
+        max: 50,
+        from: 30,
+        grid_num: 5,
+        onChange: function (data) {
+          calcProfit(data, item)
+        }
+      })
+    })
+  }
+
+  const calcProfit = (data, item) => {
+    const proc = $(item)
+      .parents(".deposit-card")
+      .find('.deposit-card__item--main')
+      .find('.deposit-card__proc').text().split(`%`)[0];
+
+    const sum_elem = $(item).parents(".deposit-card__bottom").find('.deposit-card__profit-val');
+
+    const sum_profit = 10000 / 100 * proc * data.from;
+
+    sum_elem.text(sum_profit)
+  }
 
 
   //mmenu
@@ -182,8 +249,4 @@ $(function () {
     forms.removeClass(`test-form--visible`);
     $(`#test-form-${newIdNum}`).addClass(`test-form--visible`);
   });
-
-
-
-
 });
