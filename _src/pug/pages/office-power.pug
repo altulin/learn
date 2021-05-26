@@ -4,8 +4,11 @@ include ../helpers/mixins.pug
 block asside-active
   -const active = 1;
 
+block asside-power
+  -const power = true;
+
 block content
-  -const heads = [`Простым языком о Биткойнах и майнинге`,`Основы блокчейна`,`Экономика будущего`,`Оборудование для майнинга`]
+
   section.farm.office-container
     h2.farm__title.office-title Ваша облачная криптоферма
     .farm__inner
@@ -22,19 +25,19 @@ block content
             while n < 8
               -n++
               li.miners__item
-                a.miners__link.miners__link(href="")
+                a.miners__link.miners__link(href="#modal-power" rel="modal:open")
                   figure.miners__img-wrap.miners__img-wrap
                   p.miners__text.miners__text купить мощность
-
+          a.miners__link-sell.link-sell.hover-opacity(href="#modal-power" rel="modal:open") Увеличить доход
         .farm__profit.farm-profit
-          h3.farm__subtitle Доходность ваших майнеров за месяц
+          h3.farm__subtitle.farm-profit__title Доходность ваших майнеров за месяц
           .farm-profit__chart
           .farm-profit__box
             p.farm-profit__profit Доходность:
-              span.farm-profit__sum 54 200 ₽
+              span.farm-profit__sum 54 200 <span>₽</span>
               span.farm-profit__proc.proc.proc--plus 7,00%
 
-            a.farm-profit__link(href="") Увеличить доход
+            a.farm-profit__link.link-sell.hover-opacity(href="#modal-power" rel="modal:open") Увеличить доход
 
       .farm__col.farm__col--right
         .farm__stat.stat.stat--vertical
@@ -49,17 +52,47 @@ block content
             li.stat__item
               span.stat__term Доход за сегодня:
               .stat__box
-                span.stat__def.size-1.stat__def--rub 2 540
+                span.stat__def.size-1.stat__def--rub 2 540 <span>₽</span>
                 span.stat__proc.proc.proc--plus 4,54%
 
             li.stat__item
               span.stat__term Средний доход в день:
               .stat__box
-                span.stat__def.size-1.stat__def--rub 1 823
+                span.stat__def.size-1.stat__def--rub 1 823 <span>₽</span>
                 span.stat__proc.proc.proc--minus 2,18%
 
             li.stat__item
               span.stat__term Доход за все время:
               .stat__box
-                span.stat__def.size-1.stat__def--rub 54 800
+                span.stat__def.size-1.stat__def--rub 54 800 <span>₽</span>
                 span.stat__proc.proc.proc--plus 24,54%
+
+
+  section.modal-power.container.container--modal.modal#modal-power
+    a.modal-power__close-link.modal-link(href="#modal-power" rel="modal:close" aria-label="закрыть")
+    .modal-power__inner
+      .modal-power__left
+        form.modal-power__form.power-form(method="post" action="" name="modal-power")
+          fieldset.power-form__field
+            legend.power-form__legend Покупка мощности
+            p.power-form__text Укажите сумму, которую вы готовы инвестировать:
+
+            label.power-form__label(for="range-power")
+              span.power-form__label-text Инвестиции в <span>₽</span>
+              input.power-form__input.range-power#range-power(type="text")
+
+            ul.power-form__list
+              li.power-form__item
+                p.power-form__term Покупаемая мощность
+                p.power-form__description 2 450 GH/s
+              li.power-form__item
+                p.power-form__term Заработок в день
+                p.power-form__description 750 <span>₽</span>
+              li.power-form__item
+                p.power-form__term Заработок в месяц
+                p.power-form__description 75 000 <span>₽</span>
+              li.power-form__item
+                p.power-form__term Заработок в год
+                p.power-form__description 750 000 <span>₽</span>
+
+          button.power-form__btn.btn(type="submit") Купить

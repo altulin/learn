@@ -21,7 +21,7 @@
     <meta name="theme-color" content="#ffffff">
     <link href="/css/style.css" rel="stylesheet">
   </head>
-  <body class="office-body">
+  <body class="office-body office-body--power">
     <div class="office-body__left body-asside">
       <asside class="body-asside__box"><a class="body-asside__logo" href="/index.html"><picture>
 <source srcset="/img/webp/logo-w.webp" type="image/webp"><img class="logo__img" src="/img/logo-w.png" alt="logo" width="107" height="19" loading="lazy">
@@ -51,7 +51,7 @@
               </picture>
             </figure></a>
           <nav class="office-header__nav" id="office-header-nav">
-            <ul class="office-header__list"> 
+            <ul class="office-header__list">
               <li class="office-header__item office-header__item--visible"><a class="office-header__link office-header__link--active" href="/office-my-learn.html">Мое обучение</a></li>
               <li class="office-header__item office-header__item--visible"><a class="office-header__link" href="/office-programs.html">Программы обучения</a></li>
               <li class="office-header__item office-header__item--visible"><a class="office-header__link" href="/reward.html">Вывод вознаграждения</a></li>
@@ -62,7 +62,7 @@
           </nav>
         </div>
       </header>
-      <main class="office-main"> 
+      <main class="office-main">
         <section class="farm office-container">
           <h2 class="farm__title office-title">Ваша облачная криптоферма</h2>
           <div class="farm__inner">
@@ -73,37 +73,37 @@
                   <li class="miners__item miners__item--active"><a class="miners__link miners__link--active" href="">
                       <figure class="miners__img-wrap miners__img-wrap--active"></figure>
                       <p class="miners__text miners__text--active">4535 GH/s</p></a></li>
-                  <li class="miners__item"><a class="miners__link miners__link" href="">
+                  <li class="miners__item"><a class="miners__link miners__link" href="#modal-power" rel="modal:open">
                       <figure class="miners__img-wrap miners__img-wrap"></figure>
                       <p class="miners__text miners__text">купить мощность</p></a></li>
-                  <li class="miners__item"><a class="miners__link miners__link" href="">
+                  <li class="miners__item"><a class="miners__link miners__link" href="#modal-power" rel="modal:open">
                       <figure class="miners__img-wrap miners__img-wrap"></figure>
                       <p class="miners__text miners__text">купить мощность</p></a></li>
-                  <li class="miners__item"><a class="miners__link miners__link" href="">
+                  <li class="miners__item"><a class="miners__link miners__link" href="#modal-power" rel="modal:open">
                       <figure class="miners__img-wrap miners__img-wrap"></figure>
                       <p class="miners__text miners__text">купить мощность</p></a></li>
-                  <li class="miners__item"><a class="miners__link miners__link" href="">
+                  <li class="miners__item"><a class="miners__link miners__link" href="#modal-power" rel="modal:open">
                       <figure class="miners__img-wrap miners__img-wrap"></figure>
                       <p class="miners__text miners__text">купить мощность</p></a></li>
-                  <li class="miners__item"><a class="miners__link miners__link" href="">
+                  <li class="miners__item"><a class="miners__link miners__link" href="#modal-power" rel="modal:open">
                       <figure class="miners__img-wrap miners__img-wrap"></figure>
                       <p class="miners__text miners__text">купить мощность</p></a></li>
-                  <li class="miners__item"><a class="miners__link miners__link" href="">
+                  <li class="miners__item"><a class="miners__link miners__link" href="#modal-power" rel="modal:open">
                       <figure class="miners__img-wrap miners__img-wrap"></figure>
                       <p class="miners__text miners__text">купить мощность</p></a></li>
-                  <li class="miners__item"><a class="miners__link miners__link" href="">
+                  <li class="miners__item"><a class="miners__link miners__link" href="#modal-power" rel="modal:open">
                       <figure class="miners__img-wrap miners__img-wrap"></figure>
                       <p class="miners__text miners__text">купить мощность</p></a></li>
-                  <li class="miners__item"><a class="miners__link miners__link" href="">
+                  <li class="miners__item"><a class="miners__link miners__link" href="#modal-power" rel="modal:open">
                       <figure class="miners__img-wrap miners__img-wrap"></figure>
                       <p class="miners__text miners__text">купить мощность</p></a></li>
-                </ul>
+                </ul><a class="miners__link-sell link-sell hover-opacity" href="#modal-power" rel="modal:open">Увеличить доход</a>
               </div>
               <div class="farm__profit farm-profit">
-                <h3 class="farm__subtitle">Доходность ваших майнеров за месяц</h3>
+                <h3 class="farm__subtitle farm-profit__title">Доходность ваших майнеров за месяц</h3>
                 <div class="farm-profit__chart"></div>
                 <div class="farm-profit__box">
-                  <p class="farm-profit__profit">Доходность:<span class="farm-profit__sum">54 200 ₽</span><span class="farm-profit__proc proc proc--plus">7,00%</span></p><a class="farm-profit__link" href="">Увеличить доход</a>
+                  <p class="farm-profit__profit">Доходность:<span class="farm-profit__sum">54 200 <span>₽</span></span><span class="farm-profit__proc proc proc--plus">7,00%</span></p><a class="farm-profit__link link-sell hover-opacity" href="#modal-power" rel="modal:open">Увеличить доход</a>
                 </div>
               </div>
             </div>
@@ -113,16 +113,50 @@
                 <ul class="stat__list stat__list--vertical">
                   <li class="stat__item"><span class="stat__term">Майнеры/мощность:</span><span class="stat__def size-1">5 шт./ 4535 GH/s</span></li>
                   <li class="stat__item"><span class="stat__term">Доход за сегодня:</span>
-                    <div class="stat__box"><span class="stat__def size-1 stat__def--rub">2 540</span><span class="stat__proc proc proc--plus">4,54%</span></div>
+                    <div class="stat__box"><span class="stat__def size-1 stat__def--rub">2 540 <span>₽</span></span><span class="stat__proc proc proc--plus">4,54%</span></div>
                   </li>
                   <li class="stat__item"><span class="stat__term">Средний доход в день:</span>
-                    <div class="stat__box"><span class="stat__def size-1 stat__def--rub">1 823</span><span class="stat__proc proc proc--minus">2,18%</span></div>
+                    <div class="stat__box"><span class="stat__def size-1 stat__def--rub">1 823 <span>₽</span></span><span class="stat__proc proc proc--minus">2,18%</span></div>
                   </li>
                   <li class="stat__item"><span class="stat__term">Доход за все время:</span>
-                    <div class="stat__box"><span class="stat__def size-1 stat__def--rub">54 800</span><span class="stat__proc proc proc--plus">24,54%</span></div>
+                    <div class="stat__box"><span class="stat__def size-1 stat__def--rub">54 800 <span>₽</span></span><span class="stat__proc proc proc--plus">24,54%</span></div>
                   </li>
                 </ul>
               </div>
+            </div>
+          </div>
+        </section>
+        <section class="modal-power container container--modal modal" id="modal-power"><a class="modal-power__close-link modal-link" href="#modal-power" rel="modal:close" aria-label="закрыть"></a>
+          <div class="modal-power__inner">
+            <div class="modal-power__left">
+              <form class="modal-power__form power-form" method="post" action="" name="modal-power">
+                <fieldset class="power-form__field">
+                  <legend class="power-form__legend">Покупка мощности</legend>
+                  <p class="power-form__text">Укажите сумму, которую вы готовы инвестировать:</p>
+                  <label class="power-form__label" for="range-power"><span class="power-form__label-text">Инвестиции в <span>₽</span></span>
+                    <input class="power-form__input range-power" id="range-power" type="text">
+                  </label>
+                  <ul class="power-form__list">
+                    <li class="power-form__item">
+                      <p class="power-form__term">Покупаемая мощность</p>
+                      <p class="power-form__description">2 450 GH/s</p>
+                    </li>
+                    <li class="power-form__item">
+                      <p class="power-form__term">Заработок в день</p>
+                      <p class="power-form__description">750 <span>₽</span></p>
+                    </li>
+                    <li class="power-form__item">
+                      <p class="power-form__term">Заработок в месяц</p>
+                      <p class="power-form__description">75 000 <span>₽</span></p>
+                    </li>
+                    <li class="power-form__item">
+                      <p class="power-form__term">Заработок в год</p>
+                      <p class="power-form__description">750 000 <span>₽</span></p>
+                    </li>
+                  </ul>
+                </fieldset>
+                <button class="power-form__btn btn" type="submit">Купить</button>
+              </form>
             </div>
           </div>
         </section>
@@ -151,6 +185,6 @@
         </div>
       </footer>
     </div>
-    <script src="/js/script.js" type="module"></script>
+    <script src="/js/script.js"></script>
   </body>
 </html>

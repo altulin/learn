@@ -93,8 +93,79 @@ $(function () {
 
     const sum_profit = 10000 / 100 * proc * data.from;
 
-    sum_elem.text(sum_profit)
+    sum_elem.text(`${sum_profit} ₽`)
   }
+
+
+  let range_modal = $(".range-power");
+  if (range_modal.length > 0) {
+    range_modal.ionRangeSlider({
+      grid: true,
+      min: 1000,
+      max: 1000000,
+      from: 500000,
+      step: 1000,
+
+    });
+  }
+
+
+  // chart canvasjs
+
+  const options = {
+    animationEnabled: true,
+    title: {
+      // text: "Company Revenue by Year"
+    },
+    axisY: {
+      // title: "Revenue in USD",
+      valueFormatString: "#0,,.",
+      suffix: "k",
+      // prefix: "$"
+    },
+    data: [{
+      type: "area",
+      markerSize: 5,
+      xValueFormatString: "YYYY",
+      yValueFormatString: "$#,##0.##",
+      dataPoints: [
+        { x: new Date(2000, 0), y: 22890000 },
+        { x: new Date(2001, 0), y: 28300000 },
+        { x: new Date(2002, 0), y: 10090000 },
+        { x: new Date(2003, 0), y: 18400000 },
+        { x: new Date(2004, 0), y: 13960000 },
+        { x: new Date(2005, 0), y: 26130000 },
+        { x: new Date(2006, 0), y: 18210000 },
+        { x: new Date(2007, 0), y: 10000000 },
+        { x: new Date(2008, 0), y: 13970000 },
+        { x: new Date(2009, 0), y: 15060000 },
+        { x: new Date(2010, 0), y: 17980000 },
+        { x: new Date(2011, 0), y: 23860000 },
+        { x: new Date(2012, 0), y: 47040000 },
+        { x: new Date(2013, 0), y: 49260000 },
+        { x: new Date(2014, 0), y: 13940000 },
+        { x: new Date(2015, 0), y: 9720000 },
+        { x: new Date(2016, 0), y: 11400000 }
+      ]
+    }]
+  };
+
+  const chart = $(".farm-profit__chart")
+
+  if (chart.length > 0) {
+    chart.CanvasJSChart(options);
+  }
+
+
+  if ($(window).width() <= 768) {
+    $('.miners__list').slick({
+      // autoplay: true,
+      // autoplaySpeed: 1000
+    });
+  }
+
+
+
 
 
   //mmenu

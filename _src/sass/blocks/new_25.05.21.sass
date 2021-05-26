@@ -50,8 +50,6 @@
     transform: rotate(180deg) translateY(20px)
     z-index: 1
 
-  &__item
-
 .steps-card
   width: calc(25% - (60px / 4))
   background: #FFFFFF
@@ -413,19 +411,20 @@
 .farm
   padding-top: 40px
 
-  &__title
-
   &__inner
     display: flex
     justify-content: space-between
 
-  &__col
+    +mw(768)
+      flex-direction: column
+      align-items: center
 
   &__col--left
     width: 100%
     max-width: 680px
 
-  &__miners
+    +mw(768)
+      margin-bottom: 30px
 
   &__subtitle
     font-weight: 600
@@ -434,18 +433,17 @@
     color: #47404C
     margin-bottom: 21px
 
-  &__profit
-
   &__col--right
     width: 100%
     max-width: 340px
     margin-left: 20px
+    flex-shrink: 1
 
-  &__stat
+    +mw(768)
+      margin-left: 0
 
-.office-container
-
-.office-title
+    +mw(600)
+      max-width: none
 
 .miners
   background: #FFFFFF
@@ -453,22 +451,26 @@
   padding: 40px 40px 54px 40px
   margin-bottom: 40px
 
+  +mw(768)
+    padding-left: 15px
+    padding-right: 15px
+
   &__list
     display: flex
     flex-wrap: wrap
     justify-content: space-between
+    width: 100%
 
-  &__item--active
+    +mw(768)
+      display: block
+      max-width: 100%
 
   &__link
     display: block
+    transition: 0.2s
 
     &:hover
-
-      & .miners__img-wrap
-        opacity: 0.8
-
-  &__link--active
+      opacity: 0.8
 
   &__img-wrap
     min-height: 170px
@@ -477,7 +479,8 @@
     display: flex
     justify-content: center
     align-items: center
-    transition: 0.2s
+    background-repeat: no-repeat
+    background-position: 50% 0
 
     &::after
       content: ""
@@ -502,7 +505,13 @@
     color: #46404C
     padding: 15px 20px
 
-  &__text--active
+  &__link-sell
+    display: none
+
+    +mw(768)
+      display: block
+      margin-top: 30px
+      text-align: center
 
   &__item
     box-shadow: 5px 5px 10px #F8F9FC
@@ -512,17 +521,80 @@
     border: 1px solid #E6E6EA
     overflow: hidden
 
+    +mw(768)
+      margin-bottom: 0
+
+  & .slick-arrow
+    width: 40px
+    height: 40px
+    background-image: url(/img/svg/arr-slider.svg)
+    background-repeat: no-repeat
+    background-size: 14px 20px
+    background-position: center center
+
+    &::before
+      content: none
+
+  & .slick-next
+    right: 0
+
+  & .slick-prev
+    left: 0
+    transform: rotate(180deg) translateY(20px)
+    z-index: 1
+
 .farm-profit
+  width: 100%
+  background-color: #fff
+  border-radius: 10px
+  padding: 40px
+
+  +mw(768)
+    padding-left: 15px
+    padding-right: 15px
+
+  &__title
+    margin-bottom: 50px
 
   &__chart
+    height: 370px
+    width: 100%
+    margin-bottom: 40px
+
+    +mw(600)
+      height: 300px
 
   &__box
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    +mw(768)
+      flex-direction: column
 
   &__profit
+    font-weight: 600
+    font-size: 20px
+    line-height: 24px
+    color: #47404C
+    display: flex
+    align-items: center
+
+    +mw(768)
+      margin-bottom: 30px
+
+  &__sum
+    margin-left: 20px
 
   &__proc
+    margin-left: 14px
 
   &__link
+
+    +mw(600)
+      display: block
+      width: 100%
+      text-align: center
 
 .proc
   font-weight: 600
@@ -550,32 +622,45 @@
   &::before
     background-image: url(/img/svg/arrow-up.svg)
 
+.link-sell
+  font-weight: 500
+  font-size: 16px
+  color: #47404C
+  border: 1px solid #E0E3EE
+  border-radius: 4px
+  padding-top: 9px
+  padding-bottom: 9px
+  padding-left: 37px
+  padding-right: 37px
+
+.rouble-mark
+  display: flex
+  align-items: center
+
+.rouble-mark
+
+  &--stat
+
+    & svg
+      margin-left: 3px
+      height: 14px
+      width: 12px
+  &--profit
+
+    & svg
+      margin-left: 3px
+      height: 14px
+      width: 12px
+      transform: scale(1.2) translateY(1px)
+
 .stat
-
-  &__title
-
-  &__list
-
-  &__list--vertical
-
-  &__item
-
-  &__term
-
-  &__def
 
   &__box
     display: flex
     align-items: center
 
-  &__def--rub
-
   &__proc
     margin-left: 10px
-
-.stat--vertical
-
-.size-1
 
 .proc--minus
   background-color: #FFD1D7
@@ -583,5 +668,140 @@
 
   &::before
     background-image: url(/img/svg/arrow-down.svg)
+
+*
+  min-width: 0
+  min-height: 0
+
+.office-body--power
+
+  & .blocker
+    background-color: rgba(36, 38, 54, 0.6)
+
+    &::before
+
+      +mw(768)
+        content: none
+
+  & .container--modal
+    max-width: 1083px
+
+.modal-power
+  padding-bottom: 0
+  background-image: url(/img/modal-bg.png)
+  border-radius: 10px
+
+  +mw(768)
+    border-radius: 0
+
+  &__close-link
+    border: 1px solid #D2CFE4
+    border-radius: 5px
+
+    &::after
+      background-image: url(/img/svg/close-simple-power.svg)
+      background-repeat: no-repeat
+
+  &__inner
+    display: flex
+
+  &__left
+    width: 100%
+    max-width: 598px
+    border-radius: 10px
+    background-color: #fff
+    padding: 64px
+
+    +mw(768)
+      max-width: none
+      padding-left: 15px
+      padding-right: 15px
+
+  &__form
+
+  &__right
+
+.container
+
+  &--modal
+
+.modal
+
+  &-link
+
+.power-form
+
+  &__field
+
+  &__legend
+    font-weight: 600
+    font-size: 32px
+    line-height: 38px
+    color: #47404C
+    margin-bottom: 10px
+
+  &__text
+    font-size: 16px
+    line-height: 24px
+    color: #46404C
+    margin-bottom: 50px
+
+  &__label
+    width: 100%
+    display: flex
+    flex-direction: column
+    position: relative
+
+    +mw(600)
+
+      & + label
+        margin-top: 40px
+
+  &__label-text
+    font-size: 16px
+    line-height: 22px
+    color: #8D8D93
+    margin-bottom: 8px
+
+  &__input
+    font-size: 18px
+    line-height: 24px
+    color: #131213
+    padding: 21px 22px
+    background-color: #F0F0F4
+    border: 1px solid #E6E6EA
+    border-radius: 4px 4px 4px 0
+
+  &__list
+    margin-top: 40px
+    margin-bottom: 60px
+
+  &__item
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    & + li
+      margin-top: 20px
+
+  &__term
+    font-size: 16px
+    line-height: 24px
+    color: #131213
+
+  &__description
+    font-weight: 600
+    font-size: 32px
+    line-height: 38px
+    color: #131213
+
+    +mw(768)
+      font-size: 22px
+      flex-shrink: 0
+      margin-left: 10px
+      align-self: flex-start
+
+  &__btn
+    width: 100%
 
 /* */
